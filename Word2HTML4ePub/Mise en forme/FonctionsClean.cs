@@ -25,13 +25,21 @@ namespace Word2HTML4ePub
             {
 
                 if (string.IsNullOrEmpty(FullFinalName))
-                    parsedFN = Path.Combine(Path.GetDirectoryName(FullFileName), "Parsed-" + Path.GetFileName(FullFileName));
+                    parsedFN = Path.Combine(Path.GetDirectoryName(FullFileName).ToLower(), "Parsed-" + Path.GetFileName(FullFileName));
 
 
                 using (FileStream fsr = File.OpenRead(FullFileName))
                 {
                     using (FileStream fsw = File.Open(parsedFN, FileMode.Create))
                     {
+                        ////Pour le package NuGet - ! Temps d'accès à la librairie trop long (7s...)
+                        //Tidy.Core.TidyMessageCollection mess = new Tidy.Core.TidyMessageCollection();
+                        //Tidy.Core.Tidy tidy = new Tidy.Core.Tidy();
+                        //tidy.Options.BreakBeforeBr = true; //BreakBeforeBR = true;
+                        //tidy.Options.CharEncoding = Tidy.Core.CharEncoding.Utf8; //TidyNet.CharEncoding.UTF8;
+                        //tidy.Options.DocType = Tidy.Core.DocType.Omit; //TidyNet.DocType.Omit;
+                        
+                        //Pour la solution installée
                         TidyNet.Tidy tidy = new TidyNet.Tidy();
                         TidyNet.TidyMessageCollection mess = new TidyNet.TidyMessageCollection();
                         tidy.Options.BreakBeforeBR = true;
@@ -63,318 +71,111 @@ namespace Word2HTML4ePub
                 }
             }
             catch (Exception e)
-            {
+             {
                 System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de Cleaner le HTML!");
                 return null;
             }
             return parsedFN;
         }
 
-        public static void Clean4ePub(string ParsedFileName, string TitreDuDoc, FormMonitor.Decoupe decoupe, int TailleMaxKo)
+        public static void Clean4ePub(string PackagePath, string ParsedFileName, string TitreDuDoc, FormMonitor.Decoupe decoupe, int TailleMaxKo, FormMonitor.TraitementImages traitementImg, out List<string> FileName, out List<string> Manifest, out List<string> Spine)
         {
             DateTime LastUpdate = DateTime.Now;
+            Manifest = new List<string>();
+            Spine = new List<string>();
+            FileName = new List<string>();
 
             ReportLog("Chargement du fichier html exporté");
             //Ouverture du fichier html
             XmlDocument htmlFile = new XmlDocument();
 
             XmlElement root;
-            try
-            {
-                htmlFile.Load(ParsedFileName);
-                //XmlElement root = htmlFile.CreateElement(null, "html", "http://www.w3.org/1999/xhtml");
-                //root.SetAttribute("epub", "http://www.idpf.org/2007/ops");
-                //htmlFile.InsertAfter(root, htmlFile.FirstChild);
-                htmlFile.InsertBefore(htmlFile.CreateXmlDeclaration("1.0", "UTF-8", null), htmlFile.FirstChild);
-                htmlFile.InsertAfter(htmlFile.CreateDocumentType("html", null, null, null), htmlFile.FirstChild);
-                root = htmlFile.DocumentElement;
-                //root.SetAttribute("xmlns", "http://www.w3.org/1999/xhtml"); 
-                //root.SetAttribute("epub", "http://www.idpf.org/2007/ops");
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de lire le fichier HTML purgé!");
-                return;
-            }
-
+            if (!MajHTMLHeaders(ParsedFileName, htmlFile, out root))
+				return;
+				
             System.Xml.XPath.XPathNavigator lir;
             System.Xml.XPath.XPathNodeIterator it;
             string exPath;
-            try
-            {
-                //Creation d'un navigateur xpath
-                lir = htmlFile.CreateNavigator();
-                it = null;
 
-                exPath = null;
 
-                //Ajout du namespace epub
-                it = lir.Select("./html");
-                if (it.Count == 0)
-                    return; // pas un doc html
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de naviguer dans le fichier HTML purgé!");
+            /* 
+                <aside epub:type="footnote" id="n1">
+                <p>These have been corrected in this EPUB3 edition.</p>
+                </aside>
+             */
+
+            if (!CreateNavigator(htmlFile, out lir, out it))
+				return;
+
+ 			if (!DeleteMeta(ref lir, ref it))
+				return;
+			
+ 			if (!ExtractCssStyles(ParsedFileName, ref lir, ref it))
+				return;
+
+			if (!AddStyleHeader(TitreDuDoc, ref lir, ref it))
+				return;
+
+			if (!PurgeStylesFromHTML(ref lir, ref it))
+				return;
+			
+ 			if (!RemoveLangFromBody(ref lir, ref it))
+				return;
+ 
+			if (!RemoveAttributeStartWith("MsoNormal", ref lir, ref it))
+				return;
+
+            if (!RemoveAttribute("MsoNoSpacing", ref lir, ref it))
+				return;
+ 
+            if (!RemoveAttribute("MsoPlainText", ref lir, ref it))
+				return;
+			
+			if (!ReplaceQuotes(ref lir, ref it))
+				return;
+
+            if (!RemoveDiv(ref lir, ref it))
+				return;
+
+			if (!RemoveBalise("span", ref lir, ref it))
+				return;
+
+            if (!WordHTML2ePubHTML.RemoveIndent(ref lir))
                 return;
+            
+            if (traitementImg == FormMonitor.TraitementImages.NoImage)
+            {
+                if (!TraitementNoImages(ref lir, ref it))
+                    return;
+            }
+            else if (traitementImg == FormMonitor.TraitementImages.Convert2SVG)
+            {
+                if (!TraitementImagesSVG(ref lir, ref it))
+                    return;
+            }
+            else if (traitementImg == FormMonitor.TraitementImages.Resize600x800)
+            {
+                if (!TraitementImages600x800(PackagePath, ref lir, ref it))
+                    return;
             }
 
-            try
-            {
 
-                ReportLog("Suppression des balises meta");
-                //Suppression des infos meta
-                it = lir.Select("/html/head//meta");
-                while (it.MoveNext())
-                {
-                    it.Current.DeleteSelf();
-                    it = lir.Select("/html/head//meta");
-                }
-
-                ReportLog("Ajout d'une balise meta pour Word2ePub");
-                //Ajout d'un meta pour identifier le générateur
-                it = lir.Select("/html/head");
-                it.MoveNext();
-                it.Current.AppendChildElement(null, "meta", null, null);
-                it = lir.Select("/html/head/meta");
-                it.MoveNext();
-                //    <meta name="Generator" value="Word2ePub_1.0.0.0"/>
-                it.Current.CreateAttribute(null, "name", null, "Generateur");
-                it.Current.CreateAttribute(null, "content", null, "Word2ePub_" + Assembly.GetExecutingAssembly().GetName().Version.ToString());
-
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de supprimer les infos méta");
-            }
-
-            try
-            {
-                ReportLog("Copie des styles dans le fichier style.css");
-                //Copie des styles dans un fichier css à posttraiter
-                it = lir.Select("/html/head//style");
-                it.MoveNext();
-                File.WriteAllText(Path.Combine(Path.GetDirectoryName(ParsedFileName), "style.css"), it.Current.OuterXml);
-
-                ReportLog("Suppression des balises html/head/styles");
-                //Suppression de la section style 
-                it = lir.Select("/html/head//style");
-                while (it.MoveNext())
-                {
-                    it.Current.DeleteSelf();
-                    it = lir.Select("/html/head//style");
-                }
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de traiter la section style");
-            }
-
-            try
-            {
-                //Insertion de la balise style <link rel="Stylesheet" href="style.css"  type="text/css" />
-                ReportLog("Ajout de la balise de style (style.css)");
-                it = lir.Select("/html/head");
-                it.MoveNext();
-                it.Current.AppendChild("<link rel=\"Stylesheet\" href=\"style.css\"  type=\"text/css\" />");
-
-                //Modification du titre du document
-                ReportLog("Ajout du titre du document");
-                it = lir.Select("/html/head/title");
-                it.MoveNext();
-                it.Current.SetValue(TitreDuDoc); //it.Current.SetValue("Le titre de la page");
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de modifier le titre et la mention au fichire css");
-            }
-
-            try
-            {
-                //suppression des balises contenant l'attribut style
-                ReportLog("Purge des attributs style dans toutes les balises du body");
-                it = lir.Select("/html/body//*[@style]");
-                while (it.MoveNext())
-                {
-                    if (it.Current.Name.Equals("hr"))
-                        it.Current.ReplaceSelf("<hr />");
-                    else
-                    {
-                        //navigation jusqu'à l'attribut, et suppression
-                        it.Current.MoveToFirstAttribute();
-                        while (true)
-                        {
-                            if (string.Equals(it.Current.Name, "style"))
-                            {
-                                it.Current.DeleteSelf();
-                                break;
-                            }
-                            else
-                                it.Current.MoveToNextAttribute();
-                        }
-                        //it.Current.OuterXml = it.Current.InnerXml;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de supprimer certaines infos de style");
-            }
-
-            try
-            {
-                //suppression de l'attribut lang de la balise body
-                ReportLog("Clean des attributs de la balise body");
-                it = lir.Select("/html/body/@lang");
-                it.MoveNext();
-                it.Current.DeleteSelf();
-                //Suppression de tout attribut de la balise body
-                it = lir.Select("/html/body");
-                it.MoveNext();
-                while (it.Current.HasAttributes)
-                {
-                    it.Current.MoveToFirstAttribute();
-                    it.Current.DeleteSelf();
-                }
-
-                //suppression de la balise div de la balise body
-                ReportLog("Suppression de la balise div du body (uniquement la 1ère)");
-                it = lir.Select("/html/body/div");
-                if (it.MoveNext())
-                {
-                    it.Current.OuterXml = it.Current.InnerXml;
-                }
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de supprimer les div en trop...");
-            }
-
-            try
-            {
-
-                int nbmax = 100;
-                //suppression des attributs MsoNormal et MsoNoSpacing qui n'ont pas de raison d'être puisque ce sont les styles normaux
-                ReportLog("Clean des attributs MsoNormal et MsoNoSpacing");
-                exPath = "/html/body//*[@class='MsoNormal' or @class='MsoNoSpacing']";
-                it = lir.Select(lir.Compile(exPath));
-                nbmax = it.Count;
-                while (it.MoveNext())
-                {
-                    if ((DateTime.Now - LastUpdate).Seconds > 1)
-                    {
-                        Progress(nbmax - it.Count, nbmax);
-                        LastUpdate = DateTime.Now;
-                    }
-                    it.Current.MoveToAttribute("class", "");
-                    it.Current.DeleteSelf();
-                }
-                Progress(nbmax, nbmax);
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de supprimer MsoNormal et MsoNoSpacing");
-            }
-
-            try
-            {
-                //idem avec MsoPlainText 
-                ReportLog("Clean des attributs MsoPlainText");
-                exPath = "/html/body//*[@class='MsoPlainText']";
-                it = lir.Select(lir.Compile(exPath));
-                while (it.MoveNext())
-                {
-                    it.Current.MoveToAttribute("class", "");
-                    it.Current.DeleteSelf();
-                }
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de supprimer les MsoPlainText");
-            }
-
-            try
-            {
-                ReportLog("Remplacement des <quotes> par des <cites> (HTML5)");
-                //Remplacement des MsoQuote par des cite
-                exPath = "/html/body//*[@class='MsoQuote']";
-                it = lir.Select(lir.Compile(exPath));
-                while (it.MoveNext())
-                {
-                    if (it.Current.InnerXml.Length > 0)
-                        it.Current.ReplaceSelf("<cite>" + it.Current.InnerXml + "</cite>");
-                    else
-                        it.Current.DeleteSelf();
-                    it = lir.Select(lir.Compile(exPath));
-                }
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de remplacer les quote et les <cite>");
-            }
-
-            try
-            {
-                ReportLog("Suppression des <span> vides");
-                //suppression des span autre que ceux de class (qui ne devraient pas exister)
-                exPath = "/html/body//span[not(@class)]";
-                it = lir.Select(lir.Compile(exPath));
-                while (it.MoveNext())
-                {
-                    if (it.Current.InnerXml.Length > 0)
-                        it.Current.ReplaceSelf(it.Current.InnerXml);
-                    else
-                        it.Current.DeleteSelf();
-                    it = lir.Select(lir.Compile(exPath));
-                }
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de purger les span");
-            }
-
-            ReportLog("Suppression de l'indentation word");
-            try
-            {
-                //Suppression des \r formatés par Word
-                WordHTML2ePubHTML.RemoveIndent(ref lir);
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de supprimer les indents");
-            }
-
-            ReportLog("Extraction des styles utilisés (styles.txt)");
-            try
-            {
-                //Extraction des styles pour la mise en forme css
-                ExtractStyleList(lir);
-            }
-            catch (Exception e)
-            {
-                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible d'extraire une toc");
-            }
+            if (!ExtractStyleList(lir))
+                return;
 
             ReportLog("Extraction de la TOC et création de la table de navigation");
             if (decoupe == FormMonitor.Decoupe.Aucun)
             {
-                ReportLog("Extraction de la TOC");
-                NavTable nav = null;
-                try
-                {
-                    ////Extraction des titres pour la balise nav, puis ajout d'un id
-                    nav = ExtractTOC(ref lir);
-                    nav.ExportNavTable(ParsedFileName); //, ref lir
-                }
-                catch (Exception e)
-                {
-                    System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible d'extraire une toc");
-                }
+                NavTable nav = ExtractTOC(ref lir);
+                if (nav == null)
+                    return;
+                FileName.Add(nav.ExportNavTable(ParsedFileName)); //, ref lir
 
                 try
                 {
                     //Sauvegarde du fichier
                     htmlFile.Save(ParsedFileName);
+                    FileName.Add(ParsedFileName);
 
                     //Modif du namespace dans le fichier (impossible à faire facilement en mode xml
                     {
@@ -392,16 +193,46 @@ namespace Word2HTML4ePub
             }
             else if (decoupe == FormMonitor.Decoupe.Chapitre)
             {
-                ReportLog("Extraction de la TOC");
-                NavTable nav = null;
-                try
+                NavTable nav = ExtractTOC(ref lir);
+                if (nav == null)
+                    return;
+
+                List<string> notes = new List<string>();
+
+                //Extraction des Notes de bas de Page
+                exPath = "/html/body//p[starts-with(@class,'MsoFootnoteText')]";
+                XPathNavigator notesNode = lir.SelectSingleNode(lir.Compile(exPath));
+                while (notesNode != null)
                 {
-                    ////Extraction des titres pour la balise nav, puis ajout d'un id
-                    nav = ExtractTOC(ref lir);
+                    //Garder pour copier dans un fichier de notes
+                    notes.Add(notesNode.OuterXml);
+                    //Suppression 
+                    notesNode.DeleteSelf();
+
+                    notesNode = lir.SelectSingleNode(lir.Compile(exPath));
                 }
-                catch (Exception e)
+                
+                //Extraction des Notes de bas de Page
+                exPath = "/html/body//p[starts-with(@class,'MsoEndnoteText')]";
+                notesNode = lir.SelectSingleNode(lir.Compile(exPath));
+                while (notesNode != null)
                 {
-                    System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible d'extraire une toc");
+                    //Garder pour copier dans un fichier de notes
+                    notes.Add(notesNode.OuterXml);
+                    //Suppression 
+                    notesNode.DeleteSelf();
+
+                    notesNode = lir.SelectSingleNode(lir.Compile(exPath));
+                }
+
+                //Suppression du div clear des foot et end notes (s'il en existe...)
+                exPath = "/html/body//*[@clear]";
+                notesNode = lir.SelectSingleNode(lir.Compile(exPath));
+                while (notesNode != null)
+                {
+                    notesNode.MoveToParent();
+                    notesNode.DeleteSelf();
+                    notesNode = lir.SelectSingleNode(lir.Compile(exPath));
                 }
 
                 string ParsedFileNamePartial = null;
@@ -415,20 +246,22 @@ namespace Word2HTML4ePub
 
                     string debutfichier = WordHTML2ePubHTML.getHTMLHeader(ParsedFileName);
                     string finfichier = "</body></html>";
-                    ParsedFileNamePartial = Path.Combine(Path.GetDirectoryName(ParsedFileName), Path.GetFileNameWithoutExtension(ParsedFileName));
+                    ParsedFileNamePartial = Path.Combine(Path.GetDirectoryName(ParsedFileName).ToLower(), Path.GetFileNameWithoutExtension(ParsedFileName));
                     List<string> lofiles = new List<string>();
+
+                
+
+                    string debut;
+                    string fin;
 
                     for (int i = 0; i <= nav.NbOfChap; i++)
                     {
-                        string debut;
-                        string fin;
-
                         nav.SplitTextes(i, out debut, out fin);
 
                         //Extraction des titres pour la balise nav, puis ajout d'un id
                         if (!string.IsNullOrEmpty(debut))
                         {
-                            exPath = "/html/body/*[@id=\"" + debut + "\"]";
+                            exPath = "/html/body//*[@id=\"" + debut + "\"]";
                             XPathNavigator nodeDebut = lir.SelectSingleNode(lir.Compile(exPath));
                             debut = nodeDebut.OuterXml;
                             int splitter = debut.IndexOf(">");
@@ -438,8 +271,11 @@ namespace Word2HTML4ePub
 
                         if (!string.IsNullOrEmpty(fin))
                         {
-                            exPath = "/html/body/*[@id=\"" + fin + "\"]";
+                            exPath = "/html/body//*[@id=\"" + fin + "\"]";
                             XPathNavigator nodeFin = lir.SelectSingleNode(lir.Compile(exPath));
+                            if (nodeFin == null)
+                                continue; // TODO : debug de ce cas bizare
+
                             fin = nodeFin.OuterXml;
                             //                            lir.MoveTo(nodeFin);
                             int splitter = fin.IndexOf(">");
@@ -469,8 +305,80 @@ namespace Word2HTML4ePub
                         }
                     }
 
-                    ////Sauvegarde du fichier
-                    //htmlFile.Save(ParsedFileName);
+                    //Création d'un fichier de notes
+                    if (notes.Count != 0)
+                    {
+                        ReportLog("Création d'un fichier d'annotations");
+                        string notesFile = ParsedFileNamePartial + "-notes.html";
+
+                        //Chargement des notes
+                        string notesFinales = "";
+                        foreach (string note in notes)
+                        {
+                            XmlDocument notesDoc = new XmlDocument();
+                            notesDoc.LoadXml(note);
+
+                            //Creation d'un navigateur
+                            XPathNavigator navNotes = notesDoc.CreateNavigator();
+
+                            //recherche des notes
+                            exPath = "//a[starts-with(@href,'#_')]";
+                            XPathNavigator node = navNotes.SelectSingleNode(navNotes.Compile(exPath));
+                            while (node != null)
+                            {
+                                string balise = node.GetAttribute("href", "");
+                                string baliseID = node.GetAttribute("id", "");
+                                bool balID = false;
+                                if (string.IsNullOrEmpty(baliseID))
+                                {
+                                    if (balise.Contains("_ftnref"))
+                                        baliseID = balise.Replace("ref", "");
+                                    else if (balise.Contains("_ednref"))
+                                        baliseID = balise.Replace("ref", "");
+                                }
+                                else
+                                    balID = true;
+
+
+                                baliseID = baliseID.Replace("#", "");
+                                balise = balise.Replace("#", "");
+                                node.MoveToAttribute("href", "");
+
+                                //recherche de la cible
+                                foreach (string s in lofiles)
+                                {
+                                    string cont = File.ReadAllText(s);
+                                    int ind = cont.IndexOf(baliseID);
+                                    int indIDsrc = cont.IndexOf(balise);
+                                    if (ind > 0)
+                                    {
+                                        //Modif de la note
+                                        node.SetValue(Path.GetFileName(s) + "#" + balise);
+                                        node.MoveToParent();
+                                        if (!balID)
+                                            node.CreateAttribute("", "id", notesDoc.NamespaceURI, baliseID);
+                                        if (node.MoveToAttribute("name", ""))
+                                            node.DeleteSelf();
+                                        notesFinales += notesDoc.OuterXml;
+
+                                        //modif du fichier source
+                                        if (indIDsrc != -1)
+                                            cont = cont.Replace("#" + baliseID, Path.GetFileName(notesFile) + "#" + baliseID);
+                                        else
+                                            cont = cont.Replace("#" + baliseID, Path.GetFileName(notesFile) + "#" + baliseID + "\" id=\"" + balise);
+                                        cont = cont.Replace("name=\"" + balise + "\" ", "");
+                                        File.WriteAllText(s, cont);
+                                        break;
+                                    }
+                                }
+                                node = navNotes.SelectSingleNode(lir.Compile(exPath));
+                            }
+
+                        }
+                        File.WriteAllText(notesFile, debutfichier + notesFinales + finfichier);
+                        lofiles.Add(notesFile);
+
+                    }
 
                     string opf = "<opf:manifest>\r\n";
                     string spine = "<opf:spine>\r\n";
@@ -483,12 +391,16 @@ namespace Word2HTML4ePub
                         contenu = contenu.Replace("<html>",
                             "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">");
                         File.WriteAllText(lofiles[i], contenu, Encoding.UTF8);
-
-                        opf += "<opf:item id=\"Chap" + i.ToString() + "\" href=\"" + Path.GetFileName(lofiles[i]) + "\" media-type=\"application/xhtml+xml\" />\r\n";
+                        if (contenu.Contains("<svg"))
+                            opf += "<opf:item id=\"Chap" + i.ToString() + "\" href=\"" + Path.GetFileName(lofiles[i]) + "\" media-type=\"application/xhtml+xml\" properties=\"svg\" />\r\n";
+                        else
+                            opf += "<opf:item id=\"Chap" + i.ToString() + "\" href=\"" + Path.GetFileName(lofiles[i]) + "\" media-type=\"application/xhtml+xml\" />\r\n";
                         spine += "<opf:itemref idref=\"Chap" + i.ToString() + "\" linear=\"yes\" />\r\n";
+                        
+                        Spine.Add("<opf:itemref idref=\"Chap" + i.ToString() + "\" linear=\"yes\" />");
+                        FileName.Add(lofiles[i]);
                     }
                     File.WriteAllText(ParsedFileNamePartial + "-opf.txt", opf + "\r\n" + spine);
-
                 }
                 catch (Exception e)
                 {
@@ -496,18 +408,11 @@ namespace Word2HTML4ePub
                     return;
                 }
 
-                ReportLog("Création de la table de navigation");
-                try
-                {
-                    if (nav != null)
-                        nav.ExportNavTableSplittedbyChap(ParsedFileNamePartial); //, ref lir
-                }
-                catch (Exception e)
-                {
-                    System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible d'extraire une toc");
-                }
-            }
+                if (nav != null)
+                    FileName.Add(nav.ExportNavTableSplittedbyChap(ParsedFileNamePartial)); //, ref lir
 
+                Manifest = FileName;
+            }
         }
     }
 }

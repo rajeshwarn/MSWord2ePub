@@ -1,0 +1,22 @@
+C:\Users\Emilie\Documents\Visual Studio 2010\Projects\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.XML
+C:\Users\Emilie\Documents\Visual Studio 2010\Projects\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.dll
+C:\Users\Emilie\Documents\Visual Studio 2010\Projects\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.pdb
+C:\Users\Emilie\Documents\Visual Studio 2010\Projects\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.csprojResolveAssemblyReference.cache
+C:\Users\Emilie\Documents\Visual Studio 2010\Projects\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.TidyMessages.resources
+C:\Users\Emilie\Documents\Visual Studio 2010\Projects\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.csproj.GenerateResource.Cache
+C:\Users\Emilie\Documents\Visual Studio 2010\Projects\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.dll
+C:\Users\Emilie\Documents\Visual Studio 2010\Projects\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.pdb
+C:\Users\Portable Taillis\Desktop\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.XML
+C:\Users\Portable Taillis\Desktop\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.dll
+C:\Users\Portable Taillis\Desktop\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.pdb
+C:\Users\Portable Taillis\Desktop\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.TidyMessages.resources
+C:\Users\Portable Taillis\Desktop\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.csproj.GenerateResource.Cache
+C:\Users\Portable Taillis\Desktop\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.dll
+C:\Users\Portable Taillis\Desktop\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.pdb
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.XML
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\bin\Debug\TidyNet.pdb
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.TidyMessages.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.csproj.GenerateResource.Cache
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\obj\Debug\TidyNet.pdb

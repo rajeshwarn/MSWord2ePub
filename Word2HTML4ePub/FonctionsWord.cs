@@ -2,7 +2,6 @@
 using Word = Microsoft.Office.Interop.Word;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
-using Microsoft.Office.Core;
 using System.IO;
 using System.Windows.Forms;
 
@@ -10,12 +9,21 @@ namespace Word2HTML4ePub
 {
     public partial class WordHTML2ePubHTML
     {
-        //public static DialogResult EditEpubParam(ref Microsoft.Office.Interop.Word.Document doc)
-        //{
-        //    //Affiche le formulaire
-        //    FormMetaData frm = new FormMetaData(ref doc);
-        //    return frm.ShowDialog();
-        //}
+        public static void OpenHTMLFile(string fileName)
+        {
+            if (!File.Exists(fileName))
+                return;
+
+            object newFileName = fileName;
+
+            Globals.ThisAddIn.Application.Documents.Open(
+                ref newFileName, (object)true, (object)false,
+                (object)false, Type.Missing, Type.Missing, (object)false,Type.Missing,
+                Type.Missing, Microsoft.Office.Interop.Word.WdOpenFormat.wdOpenFormatWebPages, 
+                Type.Missing,(object)true, (object)false, Type.Missing, Type.Missing, Type.Missing);
+            //Microsoft.Office.Interop.Word.Documents.Open(ref object, [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object], [ref object])
+
+        }
 
         /// <summary>
         /// Ouvrir automatiquement un fichier word... fonction utilisée pour le debug.
@@ -39,10 +47,14 @@ namespace Word2HTML4ePub
         /// <returns></returns>
         private static string SaveAsHTML(Microsoft.Office.Interop.Word.Document doc)
         {
+            string htmlFileName = GetDocProperty(doc, "htmlFile");
             object newFileName = Path.Combine(Path.GetDirectoryName(doc.FullName), Path.GetFileNameWithoutExtension(doc.Name) + ".html");
+            if (!string.IsNullOrEmpty(htmlFileName))
+                newFileName = Path.Combine(Path.GetDirectoryName(doc.FullName), htmlFileName);
+
             object htmlFileFormat = Word.WdSaveFormat.wdFormatFilteredHTML;
             object LockComments = false;
-            object Encoding = MsoEncoding.msoEncodingUTF8;
+            object Encoding = Office.MsoEncoding.msoEncodingUTF8;
             object InsertLineBreaks = false;
             object lineEnd = Word.WdLineEndingType.wdLFOnly;
             object AddToRecentFiles = false;
@@ -57,6 +69,12 @@ namespace Word2HTML4ePub
 
             try
             {
+                doc.WebOptions.AllowPNG = true;
+                doc.WebOptions.BrowserLevel = Word.WdBrowserLevel.wdBrowserLevelV4;
+                doc.WebOptions.RelyOnCSS = true;
+                doc.WebOptions.TargetBrowser = Office.MsoTargetBrowser.msoTargetBrowserIE4;
+
+                doc.WebOptions.Encoding = Office.MsoEncoding.msoEncodingUTF8;
                 doc.SaveAs(ref newFileName, ref htmlFileFormat, ref LockComments,
                     Type.Missing, ref AddToRecentFiles, Type.Missing,
                     ref ReadOnlyRecommended, ref EmbedTrueTypeFonts,
@@ -79,19 +97,67 @@ namespace Word2HTML4ePub
         /// <param name="doc"></param>
         /// <param name="PropName"></param>
         /// <returns></returns>
-        private static string GetDocProperty(Microsoft.Office.Interop.Word.Document doc, string PropName)
+        public static string GetDocProperty(Word.Document doc, string PropName)
         {
+            Microsoft.Office.Core.DocumentProperties properties = (Microsoft.Office.Core.DocumentProperties)doc.CustomDocumentProperties;
             try
             {
-                Microsoft.Office.Core.DocumentProperties properties = (Microsoft.Office.Core.DocumentProperties)doc.CustomDocumentProperties;
-                if (properties[PropName].Type != MsoDocProperties.msoPropertyTypeString)
-                    throw new Exception("Pas de titre...");
-
-                return (string)properties[PropName].Value;
+                if (CheckPropertyExist(properties, PropName))
+                {
+                    if (properties[PropName].Type != Office.MsoDocProperties.msoPropertyTypeString)
+                        throw new Exception("Pas une string...");
+                }
+                else
+                {
+                    properties.Add(PropName, false, Microsoft.Office.Core.MsoDocProperties.msoPropertyTypeString, "", null);
+                    doc.Saved = false;
+                }
             }
             catch (Exception ex)
             {
                 return null;
+            }
+            return (string)properties[PropName].Value;
+        }
+
+        static private bool CheckPropertyExist(Microsoft.Office.Core.DocumentProperties properties, string PropName)
+        {
+            foreach (Office.DocumentProperty prop in properties)
+            {
+                if (prop.Name.Equals(PropName))
+                    return true;
+            }
+            return false;
+        }
+
+
+        /// <summary>
+        /// Ecrit un paramètre dans le fichier word
+        /// </summary>
+        /// <param name="doc">fichier word doc</param>
+        /// <param name="PropName">le nom du paramètre</param>
+        /// <param name="value">sa valeur</param>
+        public static void SetDocProperty(Microsoft.Office.Interop.Word.Document doc, string PropName, string value)
+        {
+            try
+            {
+                Microsoft.Office.Core.DocumentProperties properties = (Microsoft.Office.Core.DocumentProperties)doc.CustomDocumentProperties;
+                if (CheckPropertyExist(properties, PropName))
+                {
+                    if (!string.Equals(properties[PropName].Value, value))
+                    {
+                        properties[PropName].Value = value;
+                        doc.Saved = false;
+                    }
+                }
+                else
+                {
+                    properties.Add(PropName, false, Office.MsoDocProperties.msoPropertyTypeString, value);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
@@ -101,19 +167,117 @@ namespace Word2HTML4ePub
         /// <param name="doc"></param>
         /// <param name="PropName"></param>
         /// <returns></returns>
-        private static bool GetDocFlag(Microsoft.Office.Interop.Word.Document doc, string PropName)
+        public static bool GetDocFlag(Microsoft.Office.Interop.Word.Document doc, string PropName)
         {
+            Microsoft.Office.Core.DocumentProperties properties = (Microsoft.Office.Core.DocumentProperties)doc.CustomDocumentProperties;
             try
             {
-                Microsoft.Office.Core.DocumentProperties properties = (Microsoft.Office.Core.DocumentProperties)doc.CustomDocumentProperties;
-                if (properties[PropName].Type != MsoDocProperties.msoPropertyTypeBoolean)
-                    throw new Exception("Pas de titre...");
-
-                return (bool)properties[PropName].Value;
+                if (CheckPropertyExist(properties, PropName))
+                {
+                    if (properties[PropName].Type != Office.MsoDocProperties.msoPropertyTypeBoolean)
+                        throw new Exception("Pas un booléen...");
+                }
+                else
+                {
+                    properties.Add(PropName, false, Microsoft.Office.Core.MsoDocProperties.msoPropertyTypeBoolean, false, null);
+                    doc.Saved = false;
+                }
             }
             catch (Exception ex)
             {
                 return false;
+            }
+            return (bool)properties[PropName].Value;
+        }
+
+        /// <summary>
+        /// Ecrit un paramètre dans le fichier word
+        /// </summary>
+        /// <param name="doc">fichier word doc</param>
+        /// <param name="PropName">le nom du paramètre</param>
+        /// <param name="value">sa valeur</param>
+        public static void SetDocFlag(Microsoft.Office.Interop.Word.Document doc, string PropName, bool value)
+        {
+            try
+            {
+                Microsoft.Office.Core.DocumentProperties properties = (Microsoft.Office.Core.DocumentProperties)doc.CustomDocumentProperties;
+                if (CheckPropertyExist(properties, PropName))
+                {
+                    if (properties[PropName].Value != value)
+                    { 
+                        properties[PropName].Value = value;
+                        doc.Saved = false;
+                    }
+                }
+                else
+                {
+                    properties.Add(PropName, false, Office.MsoDocProperties.msoPropertyTypeBoolean, value);
+                    doc.Saved = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Récupère une propriété de date dans le fichier
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <param name="PropName"></param>
+        /// <returns></returns>
+        public static DateTime GetDocDateTime(Microsoft.Office.Interop.Word.Document doc, string PropName)
+        {
+            Microsoft.Office.Core.DocumentProperties properties = (Microsoft.Office.Core.DocumentProperties)doc.CustomDocumentProperties;
+            try
+            {
+                if (CheckPropertyExist(properties, PropName))
+                {
+                    if (properties[PropName].Type != Office.MsoDocProperties.msoPropertyTypeDate)
+                        throw new Exception("Pas une date...");
+                }
+                else
+                { 
+                    properties.Add(PropName, false, Microsoft.Office.Core.MsoDocProperties.msoPropertyTypeDate, DateTime.Now, null);
+                    doc.Saved = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return DateTime.Now;
+            }
+            return properties[PropName].Value;
+        }
+
+        /// <summary>
+        /// Créer ou mettre à jour un paramètre DateTime dans un fichier word
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <param name="PropName"></param>
+        /// <param name="value"></param>
+        public static void SetDocDateTime(Microsoft.Office.Interop.Word.Document doc, string PropName, DateTime value)
+        {
+            try
+            {
+                Microsoft.Office.Core.DocumentProperties properties = (Microsoft.Office.Core.DocumentProperties)doc.CustomDocumentProperties;
+                if (CheckPropertyExist(properties, PropName))
+                {
+                    if (properties[PropName].Value != value)
+                    {
+                        properties[PropName].Value = value;
+                        doc.Saved = false;
+                    }
+                }
+                else
+                {
+                    properties.Add(PropName, false, Office.MsoDocProperties.msoPropertyTypeDate, value);
+                    doc.Saved = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 

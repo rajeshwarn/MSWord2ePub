@@ -37,6 +37,8 @@
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl1 = this.Factory.CreateRibbonDropDownItem();
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl2 = this.Factory.CreateRibbonDropDownItem();
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl3 = this.Factory.CreateRibbonDropDownItem();
+            Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl4 = this.Factory.CreateRibbonDropDownItem();
+            Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl5 = this.Factory.CreateRibbonDropDownItem();
             this.TabWord2ePub = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
             this.btnConvert = this.Factory.CreateRibbonButton();
@@ -47,10 +49,23 @@
             this.txtSize = this.Factory.CreateRibbonEditBox();
             this.grpePub = this.Factory.CreateRibbonGroup();
             this.btnCreatePack = this.Factory.CreateRibbonButton();
+            this.btnEditCfg = this.Factory.CreateRibbonButton();
+            this.btnExportToPack = this.Factory.CreateRibbonButton();
+            this.cmdEditCss = this.Factory.CreateRibbonButton();
+            this.cmdGeneEPub = this.Factory.CreateRibbonButton();
+            this.grpePub2Word = this.Factory.CreateRibbonGroup();
+            this.btnLoadePub = this.Factory.CreateRibbonButton();
+            this.group3 = this.Factory.CreateRibbonGroup();
+            this.label1 = this.Factory.CreateRibbonLabel();
+            this.galImages = this.Factory.CreateRibbonGallery();
+            this.separator1 = this.Factory.CreateRibbonSeparator();
+            this.cmdAbout = this.Factory.CreateRibbonButton();
             this.TabWord2ePub.SuspendLayout();
             this.group1.SuspendLayout();
             this.group2.SuspendLayout();
             this.grpePub.SuspendLayout();
+            this.grpePub2Word.SuspendLayout();
+            this.group3.SuspendLayout();
             // 
             // TabWord2ePub
             // 
@@ -58,6 +73,8 @@
             this.TabWord2ePub.Groups.Add(this.group1);
             this.TabWord2ePub.Groups.Add(this.group2);
             this.TabWord2ePub.Groups.Add(this.grpePub);
+            this.TabWord2ePub.Groups.Add(this.grpePub2Word);
+            this.TabWord2ePub.Groups.Add(this.group3);
             this.TabWord2ePub.Label = "Word2ePub";
             this.TabWord2ePub.Name = "TabWord2ePub";
             // 
@@ -68,6 +85,7 @@
             this.group1.Items.Add(this.btnAPropos);
             this.group1.Label = "Word2HTML";
             this.group1.Name = "group1";
+            this.group1.Visible = false;
             // 
             // btnConvert
             // 
@@ -93,6 +111,7 @@
             this.group2.Items.Add(this.txtSize);
             this.group2.Label = "Découpe des fichiers";
             this.group2.Name = "group2";
+            this.group2.Visible = false;
             // 
             // galDecoupe
             // 
@@ -101,11 +120,8 @@
             ribbonDropDownItemImpl1.Tag = "No";
             ribbonDropDownItemImpl2.Label = "Chapitre";
             ribbonDropDownItemImpl2.Tag = "Chap";
-            ribbonDropDownItemImpl3.Label = "Chapitre et Taille max";
-            ribbonDropDownItemImpl3.Tag = "Size";
             this.galDecoupe.Items.Add(ribbonDropDownItemImpl1);
             this.galDecoupe.Items.Add(ribbonDropDownItemImpl2);
-            this.galDecoupe.Items.Add(ribbonDropDownItemImpl3);
             this.galDecoupe.Label = "Découpe";
             this.galDecoupe.Name = "galDecoupe";
             this.galDecoupe.RowCount = 3;
@@ -122,7 +138,11 @@
             // grpePub
             // 
             this.grpePub.Items.Add(this.btnCreatePack);
-            this.grpePub.Label = "ePub";
+            this.grpePub.Items.Add(this.btnEditCfg);
+            this.grpePub.Items.Add(this.btnExportToPack);
+            this.grpePub.Items.Add(this.cmdEditCss);
+            this.grpePub.Items.Add(this.cmdGeneEPub);
+            this.grpePub.Label = "Word=>ePub";
             this.grpePub.Name = "grpePub";
             // 
             // btnCreatePack
@@ -130,6 +150,81 @@
             this.btnCreatePack.Label = "Créer un Package ePub";
             this.btnCreatePack.Name = "btnCreatePack";
             this.btnCreatePack.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnCreatePack_Click);
+            // 
+            // btnEditCfg
+            // 
+            this.btnEditCfg.Label = "Editer la configuration";
+            this.btnEditCfg.Name = "btnEditCfg";
+            this.btnEditCfg.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnConfig_Click);
+            // 
+            // btnExportToPack
+            // 
+            this.btnExportToPack.Label = "Exportation vers le Package ePub";
+            this.btnExportToPack.Name = "btnExportToPack";
+            this.btnExportToPack.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnExportToPack_Click);
+            // 
+            // cmdEditCss
+            // 
+            this.cmdEditCss.Label = "Editer feuilles de style";
+            this.cmdEditCss.Name = "cmdEditCss";
+            this.cmdEditCss.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.cmdEditCss_Click);
+            // 
+            // cmdGeneEPub
+            // 
+            this.cmdGeneEPub.Label = "Générer ePub";
+            this.cmdGeneEPub.Name = "cmdGeneEPub";
+            this.cmdGeneEPub.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.cmdGeneEPub_Click);
+            // 
+            // grpePub2Word
+            // 
+            this.grpePub2Word.Items.Add(this.btnLoadePub);
+            this.grpePub2Word.Label = "ePub=>Word";
+            this.grpePub2Word.Name = "grpePub2Word";
+            // 
+            // btnLoadePub
+            // 
+            this.btnLoadePub.Label = "Charger un ePub";
+            this.btnLoadePub.Name = "btnLoadePub";
+            this.btnLoadePub.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnLoadePub_Click);
+            // 
+            // group3
+            // 
+            this.group3.Items.Add(this.label1);
+            this.group3.Items.Add(this.galImages);
+            this.group3.Items.Add(this.separator1);
+            this.group3.Items.Add(this.cmdAbout);
+            this.group3.Label = "Word2ePub";
+            this.group3.Name = "group3";
+            // 
+            // label1
+            // 
+            this.label1.Label = "Configuration";
+            this.label1.Name = "label1";
+            // 
+            // galImages
+            // 
+            this.galImages.ColumnCount = 1;
+            ribbonDropDownItemImpl3.Label = "Images";
+            ribbonDropDownItemImpl4.Label = "NoImages";
+            ribbonDropDownItemImpl5.Label = "Resized";
+            this.galImages.Items.Add(ribbonDropDownItemImpl3);
+            this.galImages.Items.Add(ribbonDropDownItemImpl4);
+            this.galImages.Items.Add(ribbonDropDownItemImpl5);
+            this.galImages.Label = "Traitement des images";
+            this.galImages.Name = "galImages";
+            this.galImages.RowCount = 3;
+            this.galImages.ShowItemSelection = true;
+            this.galImages.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.galImages_Click);
+            // 
+            // separator1
+            // 
+            this.separator1.Name = "separator1";
+            // 
+            // cmdAbout
+            // 
+            this.cmdAbout.Label = "A propos de Word2ePub";
+            this.cmdAbout.Name = "cmdAbout";
+            this.cmdAbout.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.cmdAbout_Click);
             // 
             // RibbonWord2ePub
             // 
@@ -145,6 +240,10 @@
             this.group2.PerformLayout();
             this.grpePub.ResumeLayout(false);
             this.grpePub.PerformLayout();
+            this.grpePub2Word.ResumeLayout(false);
+            this.grpePub2Word.PerformLayout();
+            this.group3.ResumeLayout(false);
+            this.group3.PerformLayout();
 
         }
 
@@ -160,6 +259,17 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup grpePub;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnCreatePack;
         private Microsoft.Office.Tools.Ribbon.RibbonTab TabWord2ePub;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnEditCfg;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnExportToPack;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton cmdGeneEPub;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton cmdEditCss;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton cmdAbout;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup grpePub2Word;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnLoadePub;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup group3;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGallery galImages;
+        internal Microsoft.Office.Tools.Ribbon.RibbonLabel label1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonSeparator separator1;
     }
 
     partial class ThisRibbonCollection

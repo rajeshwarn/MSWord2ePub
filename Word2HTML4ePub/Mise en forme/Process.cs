@@ -119,6 +119,9 @@ namespace Word2HTML4ePub
                 sh.Range.set_Style(Microsoft.Office.Interop.Word.WdBuiltinStyle.wdStyleNormal);
             }
 
+            //0.4 Pré-traitement des notes de bas de page en note de fin de doc
+            doc.Footnotes.Convert();
+
             //1. Exportation en HTML filtré
             ReportLog("Exportation en HTML (Word)");
             htmlFileName = SaveAsHTML(doc);
@@ -167,6 +170,11 @@ namespace Word2HTML4ePub
             ReportLog("Début du nettoyage spécifique");
             //5. Clean spécifique aux epub 
             WordHTML2ePubHTML.Clean4ePub(PackagePath, parsedFN, titre, decoupe, TailleMax, traitementImg, out FileNameList, out Manifest, out Spine);
+            if (FileNameList.Count == 0)
+            {
+                ReportLog("Erreur durant le nettoyage spécifique!");
+                return;
+            }
             ReportLog("Fin du nettoyage spécifique");
 
             //6. Nettoyage des fichiers temporaires

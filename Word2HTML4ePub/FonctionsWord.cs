@@ -74,6 +74,10 @@ namespace Word2HTML4ePub
                 doc.WebOptions.RelyOnCSS = true;
                 doc.WebOptions.TargetBrowser = Office.MsoTargetBrowser.msoTargetBrowserIE4;
 
+                //Ajoutées pour la sauvegarde des images...
+                doc.WebOptions.ScreenSize = Office.MsoScreenSize.msoScreenSize1024x768;
+                doc.WebOptions.PixelsPerInch = 150;
+
                 doc.WebOptions.Encoding = Office.MsoEncoding.msoEncodingUTF8;
                 doc.SaveAs(ref newFileName, ref htmlFileFormat, ref LockComments,
                     Type.Missing, ref AddToRecentFiles, Type.Missing,
@@ -157,7 +161,7 @@ namespace Word2HTML4ePub
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -217,7 +221,7 @@ namespace Word2HTML4ePub
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -277,7 +281,7 @@ namespace Word2HTML4ePub
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
 

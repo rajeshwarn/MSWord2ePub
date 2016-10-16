@@ -74,11 +74,18 @@ namespace Word2HTML4ePub
                     {
                         pJavaPath = ReadDeportedAppFileKey("javaPath");
                         if (String.IsNullOrEmpty(pJavaPath))
-                            throw new Exception("Mauvais fichier de configuration: " + SettingFile);
-
+                        {
+                            MessageBox.Show("Mauvais fichier de configuration: " + SettingFile, "Message", MessageBoxButtons.OK);
+                            return null;
+                            //throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                        }
                         //pJavaPath = ConfigurationManager.AppSettings["javaPath"];
                         if (!File.Exists(pJavaPath))
-                            throw new Exception("java introuvable!");
+                        {
+                            MessageBox.Show("java introuvable!", "Message", MessageBoxButtons.OK);
+                            return null;
+                            //throw new Exception("java introuvable!");
+                        }
                     }
                     catch (Exception e)
                     {
@@ -119,10 +126,19 @@ namespace Word2HTML4ePub
                     {
                         pEpubCheckPath = ReadDeportedAppFileKey("epubCheckerPath");
                         if (String.IsNullOrEmpty(pEpubCheckPath))
-                            throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                        {
+                            MessageBox.Show("Mauvais fichier de configuration: " + SettingFile, "Message", MessageBoxButtons.OK);
+                            return null;
+                            //throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                        }
 
                         if (!File.Exists(pEpubCheckPath))
-                            throw new Exception("ePubcheck introuvable!");
+                        {
+                            MessageBox.Show("ePubcheck introuvable!", "Message", MessageBoxButtons.OK);
+                            return null;
+                            //throw new Exception("ePubcheck introuvable!");
+                        }
+                            
                     }
                     catch (Exception e)
                     {
@@ -200,7 +216,11 @@ namespace Word2HTML4ePub
                 {
                     string val = ReadDeportedAppFileKey("CheckPostGen");
                     if (String.IsNullOrEmpty(val))
-                        throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                    {
+                        MessageBox.Show("Mauvais fichier de configuration: " + SettingFile, "Message", MessageBoxButtons.OK);
+                        return false;
+                        //throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                    }
                     pCheckPostGen = Convert.ToBoolean(val);
                 }
                 catch (Exception e)
@@ -226,7 +246,11 @@ namespace Word2HTML4ePub
                 {
                     string val = ReadDeportedAppFileKey("AutoRemplirRessources");
                     if (String.IsNullOrEmpty(val))
-                        throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                    {
+                        MessageBox.Show("Mauvais fichier de configuration: " + SettingFile, "Message", MessageBoxButtons.OK);
+                        return false;
+                        //throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                    }
                     pAutoRessources = Convert.ToBoolean(val);
                 }
                 catch (Exception e)
@@ -251,7 +275,12 @@ namespace Word2HTML4ePub
                 {
                     string val = ReadDeportedAppFileKey("TocNcx");
                     if (String.IsNullOrEmpty(val))
-                        throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                    {
+                        MessageBox.Show("Mauvais fichier de configuration: " + SettingFile, "Message", MessageBoxButtons.OK);
+                        return false;
+                        //throw new Exception("Mauvais fichier de configuration: " + SettingFile);
+                    } 
+                    
                     pTocNcx = Convert.ToBoolean(val);
                 }
                 catch (Exception e)

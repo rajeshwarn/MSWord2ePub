@@ -78,7 +78,12 @@ namespace Word2HTML4ePub
             return parsedFN;
         }
 
-        public static void Clean4ePub(string PackagePath, string ParsedFileName, string TitreDuDoc, FormMonitor.Decoupe decoupe, int TailleMaxKo, FormMonitor.TraitementImages traitementImg, out List<string> FileName, out List<string> Manifest, out List<string> Spine)
+        public static void Clean4ePub(string PackagePath, string ParsedFileName, string TitreDuDoc, 
+            FormMonitor.Decoupe decoupe, int TailleMaxKo, 
+            FormMonitor.TraitementImages traitementImg, 
+            out List<string> FileName, 
+            out List<string> Manifest, 
+            out List<string> Spine)
         {
             DateTime LastUpdate = DateTime.Now;
             Manifest = new List<string>();
@@ -116,7 +121,13 @@ namespace Word2HTML4ePub
 			if (!AddStyleHeader(TitreDuDoc, ref lir, ref it))
 				return;
 
-			if (!PurgeStylesFromHTML(ref lir, ref it))
+            if (!RemoveDivClass(ref lir, ref it, "WordSection"))
+                return;
+
+            if (!RemoveDiv(ref lir, ref it))
+                return;
+
+            if (!PurgeStylesFromHTML(ref lir, ref it))
 				return;
 			
  			if (!RemoveLangFromBody(ref lir, ref it))
@@ -132,9 +143,6 @@ namespace Word2HTML4ePub
 				return;
 			
 			if (!ReplaceQuotes(ref lir, ref it))
-				return;
-
-            if (!RemoveDiv(ref lir, ref it))
 				return;
 
 			if (!RemoveBalise("span", ref lir, ref it))
@@ -158,7 +166,11 @@ namespace Word2HTML4ePub
                 if (!TraitementImages600x800(PackagePath, ref lir, ref it))
                     return;
             }
-
+            else 
+            {
+                if (!NoTraitementImages(PackagePath, ref lir, ref it))
+                    return;
+            }
 
             if (!ExtractStyleList(lir))
                 return;
@@ -212,7 +224,7 @@ namespace Word2HTML4ePub
                     notesNode = lir.SelectSingleNode(lir.Compile(exPath));
                 }
                 
-                //Extraction des Notes de bas de Page
+                //Extraction des Notes de Fin
                 exPath = "/html/body//p[starts-with(@class,'MsoEndnoteText')]";
                 notesNode = lir.SelectSingleNode(lir.Compile(exPath));
                 while (notesNode != null)
@@ -225,12 +237,28 @@ namespace Word2HTML4ePub
                     notesNode = lir.SelectSingleNode(lir.Compile(exPath));
                 }
 
+                ////Extraction des Notes de Fin "Reference"
+                //exPath = "/html/body//span[starts-with(@class,'MsoFootnoteReference')]";
+                //notesNode = lir.SelectSingleNode(lir.Compile(exPath));
+                //while (notesNode != null)
+                //{
+                //    //Garder pour copier dans un fichier de notes
+                //    notes.Add("<p>" +notesNode.OuterXml + "</p>");
+                //    //Suppression 
+
+                //    notesNode.MoveToParent();
+                //    notesNode.DeleteSelf();
+
+                //    notesNode = lir.SelectSingleNode(lir.Compile(exPath));
+                //}
+
+
                 //Suppression du div clear des foot et end notes (s'il en existe...)
                 exPath = "/html/body//*[@clear]";
                 notesNode = lir.SelectSingleNode(lir.Compile(exPath));
                 while (notesNode != null)
                 {
-                    notesNode.MoveToParent();
+//                    notesNode.MoveToParent();
                     notesNode.DeleteSelf();
                     notesNode = lir.SelectSingleNode(lir.Compile(exPath));
                 }
@@ -249,7 +277,11 @@ namespace Word2HTML4ePub
                     ParsedFileNamePartial = Path.Combine(Path.GetDirectoryName(ParsedFileName).ToLower(), Path.GetFileNameWithoutExtension(ParsedFileName));
                     List<string> lofiles = new List<string>();
 
-                
+                    if (string.IsNullOrEmpty(debutfichier))
+                    { 
+                        ReportLog("Impossible de spliter par chapitre!");
+                        return;
+                    }
 
                     string debut;
                     string fin;

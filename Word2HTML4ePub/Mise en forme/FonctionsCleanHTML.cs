@@ -58,8 +58,6 @@ namespace Word2HTML4ePub
 				lir = htmlFile.CreateNavigator();
 				it = null;
 
-				string exPath = null;
-
 				//Ajout du namespace epub
 				it = lir.Select("./html");
 				if (it.Count == 0)
@@ -364,20 +362,55 @@ namespace Word2HTML4ePub
                 it = lir.Select(lir.Compile(exPath));
                 while (it.MoveNext())
                 {
+                    //<div style="border:none;border-bottom:solid windowtext 1.0pt;padding:0cm 0cm 1.0pt 0cm">
+                    bool hr = false;
+                    string stl = it.Current.GetAttribute("style", "");
+                    if (!string.IsNullOrEmpty(stl))
+                        if (stl.Contains("border-bottom:solid"))
+                        {
+                            hr = true;
+                        }
 
                     int child = it.Current.SelectChildren(XPathNodeType.Element).Count;
                     switch (child)
                     {
                         case 0:
-                            it.Current.DeleteSelf();
+                            if (!hr)
+                                it.Current.DeleteSelf();
+                            else
+                                it.Current.ReplaceSelf("<hr />");
                             break;
                         case 1:
-                            it.Current.ReplaceSelf(it.Current.InnerXml);
+                            if (!hr)
+                                it.Current.ReplaceSelf(it.Current.InnerXml);
+                            else
+                                it.Current.ReplaceSelf(it.Current.InnerXml + "<hr />");
                             break;
                         default:
                             continue;
                     }
                         
+                    it = lir.Select(lir.Compile(exPath));
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de purger les <div>");
+                return false;
+            }
+        }
+
+        private static bool RemoveDivClass(ref System.Xml.XPath.XPathNavigator lir, ref System.Xml.XPath.XPathNodeIterator it, string ClassRef)
+        {
+            try
+            {
+                ReportLog("Suppression des <div> en trop");
+                string exPath = "/html/body//div[starts-with(@class,'" + ClassRef + "')]";
+                it = lir.Select(lir.Compile(exPath));
+                while (it.MoveNext())
+                {
+                    it.Current.ReplaceSelf(it.Current.InnerXml);
                     it = lir.Select(lir.Compile(exPath));
                 }
                 return true;

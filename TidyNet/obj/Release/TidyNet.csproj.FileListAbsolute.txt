@@ -24,4 +24,3 @@ C:\Users\Portable Taillis\Desktop\Word2HTML4ePub\TidyNet\bin\Release\TidyNet.dll
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\obj\Release\TidyNet.TidyMessages.resources
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\obj\Release\TidyNet.csproj.GenerateResource.Cache
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\obj\Release\TidyNet.dll
-\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\TidyNet\obj\Release\TidyNet.csprojResolveAssemblyReference.cache

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="Word2HTML4ePub.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+        </sectionGroup>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="Word2HTML4ePub.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+        </sectionGroup>
+    </configSections>
+    <userSettings>
+        <Word2HTML4ePub.Properties.Settings>
+            <setting name="TailleMaxKo" serializeAs="String">
+                <value>40</value>
+            </setting>
+        </Word2HTML4ePub.Properties.Settings>
+    </userSettings>
+    <applicationSettings>
+        <Word2HTML4ePub.Properties.Settings>
+            <setting name="ModeleEpub" serializeAs="String">
+                <value>Modele.epub</value>
+            </setting>
+            <setting name="javaPath" serializeAs="String">
+                <value>c:\Program Files\java\java.exe</value>
+            </setting>
+            <setting name="epubCheckerPath" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="CheckPostGen" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="AutoRemplirRessources" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="TocNcx" serializeAs="String">
+                <value>True</value>
+            </setting>
+        </Word2HTML4ePub.Properties.Settings>
+    </applicationSettings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

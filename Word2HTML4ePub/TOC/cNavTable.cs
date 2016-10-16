@@ -62,7 +62,7 @@ namespace Word2HTML4ePub
         private class NavTable
         {
             int[] currentLevel;
-            Level LastLevel = 0;
+            //Level LastLevel = 0;
             Level maxlevel = 0;
             List<Titre> loTitre;
 

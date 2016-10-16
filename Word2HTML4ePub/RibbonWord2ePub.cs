@@ -227,10 +227,14 @@ namespace Word2HTML4ePub
 
 
             //2. Get Css file
-            string[] cssFiles = Directory.GetFiles(PackagePath, "*.css", SearchOption.AllDirectories);
+            string[] cssFiles = Directory.GetFiles(Path.Combine(PackagePath, "content"), "*.css", SearchOption.AllDirectories);
             if (cssFiles.Length == 0)
-                throw new Exception("Pas de fichier \".css\" dans le package!");
-            if (cssFiles.Length >2)
+            {
+                File.Create(Path.Combine(PackagePath, "content", "style.css")).Close();
+                cssFiles = Directory.GetFiles(Path.Combine(PackagePath, "content"), "*.css", SearchOption.AllDirectories);
+                //throw new Exception("Pas de fichier \".css\" dans le package!");
+            }
+            else if (cssFiles.Length >2)
                 throw new Exception("plus d'un fichier \".css\" dans le package!");
 
             //3. Assurer la présence des balises présentes dans le Package

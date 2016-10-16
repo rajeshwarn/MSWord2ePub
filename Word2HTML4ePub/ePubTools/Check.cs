@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Word2HTML4ePub
@@ -13,10 +14,21 @@ namespace Word2HTML4ePub
         /// <returns>null si OK, sinon les erreurs</returns>
         public static string CheckEPub(string filename)
         {
+            //Si le fichier n'est pas en version locale, le copier dans un repéertoire temporaire
+            FileInfo fi = new FileInfo(filename);
+            string tempfile = filename;
+            if (fi.FullName.StartsWith(string.Empty.PadLeft(2, Path.DirectorySeparatorChar)))
+            {
+                tempfile = Path.Combine(Path.GetTempPath(), filename);
+                File.Copy(filename, tempfile);
+                MessageBox.Show("Fichier copié ici :" + tempfile);
+            }
+
             StringBuilder generalstring = new StringBuilder();
             StringBuilder output = new StringBuilder();
             System.Diagnostics.Process proc = new System.Diagnostics.Process();// processus de verification
-            proc.StartInfo = new System.Diagnostics.ProcessStartInfo("\"" + JavaPath + "\"", "-jar " + "\"" + EpubCheckPath + "\" \"" + filename + "\"");
+            //proc.StartInfo = new System.Diagnostics.ProcessStartInfo("\"" + JavaPath + "\"", "-jar " + "\"" + EpubCheckPath + "\" \"" + filename + "\"");
+            proc.StartInfo = new System.Diagnostics.ProcessStartInfo("\"" + JavaPath + "\"", "-jar " + "\"" + EpubCheckPath + "\" \"" + tempfile + "\"");
             proc.StartInfo.CreateNoWindow = true; // ne pas afficher de fenetre
             proc.StartInfo.UseShellExecute = false; // On désactive le shell
             proc.StartInfo.RedirectStandardOutput = true; // On redirige la sortie standard

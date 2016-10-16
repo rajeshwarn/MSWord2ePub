@@ -239,5 +239,57 @@ namespace Word2HTML4ePub
                 return false;
             }
         }
-	}
+
+        private static bool NoTraitementImages(string PackagePath, ref System.Xml.XPath.XPathNavigator lir, ref System.Xml.XPath.XPathNodeIterator it)
+        {
+            try
+            {
+                ReportLog("Traitement des images");
+                //contrôle de l'ID, et extraction de la liste des fichiers
+                string exPath = "/html/body//p/img";
+                it = lir.Select(lir.Compile(exPath));
+                while (it.MoveNext())
+                {
+                    //Recup des paramètres de l'image
+                    string w = it.Current.GetAttribute("width", it.Current.NamespaceURI);
+                    string h = it.Current.GetAttribute("height", it.Current.NamespaceURI);
+                    string id = it.Current.GetAttribute("id", it.Current.NamespaceURI);
+                    string src = it.Current.GetAttribute("src", it.Current.NamespaceURI);
+
+                    //verif d'une eventuelle légende
+                    it.Current.MoveToParent(); // retour dans le paragraphe
+                    XPathNodeIterator it1 = it.Clone();
+                    it1.Current.MoveToNext(); // deplacement sur le paragraphe suivant
+                    string cap = "";
+                    if (it1.Current.GetAttribute("class", it.Current.NamespaceURI).Contains("MsoCaption"))
+                    {
+                        string[] cap1 = it1.Current.Value.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string s in cap1)
+                        {
+                            cap += s.Trim() + " ";
+                        }
+                        it1.Current.DeleteSelf();
+                    }
+
+
+                    //Creation d'une balise figure
+                    string bal = "<figure><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" width=\"100%\" height=\"90%\" viewBox=\"0 0 ";
+                    bal += (w + " " + h + "\" preserveAspectRatio=\"meet\">");
+                    bal += "<image width=\"" + w + "\" height=\"" + h + "\" xlink:href=\"" + src + "\" />";
+                    bal += "</svg>";
+                    bal += "<figcaption>" + cap.Trim() + "</figcaption></figure>";
+                    it.Current.ReplaceSelf(bal);
+                    //it.Current.ReplaceSelf("<figure><img src=\"" + src + "\" id=\"" + id.Replace(" ", null) + "\"/><figcaption>" + cap.Trim() + "</figcaption></figure>");
+                    it = lir.Select(lir.Compile(exPath));
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de traiter les images");
+                return false;
+            }
+        }
+
+    }
 }

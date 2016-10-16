@@ -41,6 +41,8 @@ namespace Word2HTML4ePub
             //            XPathNavigator node = lir.SelectSingleNode(lir.Compile(exPath));
 
             XmlNodeList list = xml.SelectNodes(exPath);
+            if ((list == null) || (list.Count ==0))
+                return "";
 
             string bloc = null;
             if (list[0].InnerXml.Length > 50)

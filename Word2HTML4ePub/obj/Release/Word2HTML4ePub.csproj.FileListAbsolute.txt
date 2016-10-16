@@ -1,0 +1,46 @@
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll.config
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.pdb
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll.manifest
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.vsto
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Ionic.Zip.dll
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\TidyNet.dll
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Ionic.Zip.xml
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\TidyNet.xml
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.CustomMessageBox.resources
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.AboutBox.resources
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.EditParam.resources
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.FormMetaData.resources
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.FormMonitor.resources
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.InternalEditor.resources
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.Properties.Resources.resources
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.RibbonWord2ePub.resources
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.csproj.GenerateResource.Cache
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2ePub.dll
+P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2ePub.pdb
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll.config
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.pdb
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll.manifest
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.vsto
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Ionic.Zip.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\TidyNet.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Ionic.Zip.xml
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\TidyNet.xml
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.CustomMessageBox.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.AboutBox.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.EditParam.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.FormMetaData.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.FormMonitor.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.InternalEditor.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.Properties.Resources.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.RibbonWord2ePub.resources
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.csproj.GenerateResource.Cache
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2ePub.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2ePub.pdb
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\epubcheck-3.0.1.zip
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.Office.Tools.v4.0.Framework.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.dll
+\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.csprojResolveAssemblyReference.cache

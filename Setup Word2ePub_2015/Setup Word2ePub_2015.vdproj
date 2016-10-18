@@ -11,24 +11,13 @@
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
 "SccProvider" = "8:"
+"BackwardsCompatibleGUIDGeneration" = "8:TRUE"
     "Hierarchy"
     {
         "Entry"
         {
-        "MsmKey" = "8:_1F48F7AE0AEECB5AFFCE0ED7B23AF2F3"
-        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_203B054E94AF45CBA8AB7840EEAB1936"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_22C96269481B4F2E44509FD24E98C904"
-        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,14 +28,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_59268078E34432D9310581A723A1A158"
+        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6CBCEA3279C21DE9B56D4D29C0487FDA"
-        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
+        "MsmKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,7 +52,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_ADD204A8BAF9A8068F6D07AD870BB881"
+        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_CC7F404B69B3B1279C0413C992829C0D"
+        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D8309DD56B3E8B1DAF1544537D4E25CD"
         "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -76,19 +77,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6CBCEA3279C21DE9B56D4D29C0487FDA"
+        "OwnerKey" = "8:_D8309DD56B3E8B1DAF1544537D4E25CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1F48F7AE0AEECB5AFFCE0ED7B23AF2F3"
+        "OwnerKey" = "8:_59268078E34432D9310581A723A1A158"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_22C96269481B4F2E44509FD24E98C904"
+        "OwnerKey" = "8:_ADD204A8BAF9A8068F6D07AD870BB881"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -202,14 +203,54 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1F48F7AE0AEECB5AFFCE0ED7B23AF2F3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_203B054E94AF45CBA8AB7840EEAB1936"
+            {
+            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\epubcheck-3.0.1.zip"
+            "TargetName" = "8:epubcheck-3.0.1.zip"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_256FA8AC49F04042B392206F86D030F2"
+            {
+            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.vsto"
+            "TargetName" = "8:Word2ePub.vsto"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_59268078E34432D9310581A723A1A158"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1F48F7AE0AEECB5AFFCE0ED7B23AF2F3"
+                    "_59268078E34432D9310581A723A1A158"
                     {
                     "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.DLL"
                     "Attributes" = "3:512"
@@ -218,7 +259,7 @@
             "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -231,84 +272,13 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_203B054E94AF45CBA8AB7840EEAB1936"
-            {
-            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\epubcheck-3.0.1.zip"
-            "TargetName" = "8:epubcheck-3.0.1.zip"
-            "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_22C96269481B4F2E44509FD24E98C904"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_22C96269481B4F2E44509FD24E98C904"
-                    {
-                    "Name" = "8:Ionic.Zip.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Ionic.Zip.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_256FA8AC49F04042B392206F86D030F2"
-            {
-            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.vsto"
-            "TargetName" = "8:Word2ePub.vsto"
-            "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6172C454B8FE42ACBA50099FEFE9E8CF"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Word2ePub, Version=1.0.0.30, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Word2ePub, Version=1.0.0.30, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_6172C454B8FE42ACBA50099FEFE9E8CF"
@@ -320,7 +290,7 @@
             "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -335,43 +305,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6CBCEA3279C21DE9B56D4D29C0487FDA"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:TidyNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_6CBCEA3279C21DE9B56D4D29C0487FDA"
-                    {
-                    "Name" = "8:TidyNet.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:TidyNet.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_804A303B220846269535141C860CF3B5"
             {
             "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.dll.config"
             "TargetName" = "8:Word2ePub.dll.config"
             "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -391,7 +330,7 @@
             "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.dll.manifest"
             "TargetName" = "8:Word2ePub.dll.manifest"
             "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -404,6 +343,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_ADD204A8BAF9A8068F6D07AD870BB881"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_ADD204A8BAF9A8068F6D07AD870BB881"
+                    {
+                    "Name" = "8:Ionic.Zip.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Ionic.Zip.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CC7F404B69B3B1279C0413C992829C0D"
@@ -422,7 +392,38 @@
             "SourcePath" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_7B875F2C458042CEBAC018C237064726"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D8309DD56B3E8B1DAF1544537D4E25CD"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:TidyNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_D8309DD56B3E8B1DAF1544537D4E25CD"
+                    {
+                    "Name" = "8:TidyNet.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:TidyNet.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -454,6 +455,28 @@
                 {
                 }
             }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_7A9E8E634E9F4702AE2E4FC52545B255"
+            {
+            "Name" = "8:#1912"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:ProgramFilesFolder"
+                "Folders"
+                {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0F36F49C096E47579389D96068FC3AD1"
+                    {
+                    "Name" = "8:Word2ePub"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_2D73E8983DD44BBF86584619A1A3282F"
+                        "Folders"
+                        {
+                        }
+                    }
+                }
+            }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_7B875F2C458042CEBAC018C237064726"
             {
             "DefaultLocation" = "8:[ProgramFilesFolder]\\Word2ePub"
@@ -482,8 +505,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Word2ePub"
-        "ProductCode" = "8:{D3942962-09BA-4AAF-8C50-2BBBE4BE1577}"
-        "PackageCode" = "8:{5950C69C-81AE-48A5-8205-279BACB55D4A}"
+        "ProductCode" = "8:{A73DC01B-528B-46C4-845D-005383556324}"
+        "PackageCode" = "8:{5084B902-444D-4ACD-B152-B6E8265AAB1F}"
         "UpgradeCode" = "8:{1FD4D41D-C9F8-404F-859D-83CC303A7428}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -494,7 +517,7 @@
         "Manufacturer" = "8:FDLN"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Setup Word2ePub_2015"
+        "Title" = "8:Setup Word2ePub"
         "Subject" = "8:"
         "ARPCONTACT" = "8:PH FRANCOIS"
         "Keywords" = "8:"
@@ -524,6 +547,208 @@
                     "Transitive" = "11:FALSE"
                         "Keys"
                         {
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_3028637EB7C44DCE9BC734C8591ACAE0"
+                            {
+                            "Name" = "8:Wow6432Node"
+                            "Condition" = "8:"
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                                "Keys"
+                                {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_48AE32B77AC6466BACE2C9F526E4EF8F"
+                                    {
+                                    "Name" = "8:Microsoft"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_80A7FC63CB0149F8A3409C99066E38E8"
+                                            {
+                                            "Name" = "8:Vsto Runtime Setup"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_6F2D78D4D252421BA6CEF891B3BCC055"
+                                                    {
+                                                    "Name" = "8:v4"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                        }
+                                                        "Values"
+                                                        {
+                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_21AFFB6FB9B140FABF5BDB373544EEBE"
+                                                            {
+                                                            "Name" = "8:EnableVSTOLocalUNC"
+                                                            "Condition" = "8:"
+                                                            "Transitive" = "11:FALSE"
+                                                            "ValueTypes" = "3:3"
+                                                            "Value" = "3:1"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_E44B760DD6E24763AB0614CFA7F39465"
+                                            {
+                                            "Name" = "8:Office"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_49BC14663BDA4A7A89E8A679C3093969"
+                                                    {
+                                                    "Name" = "8:Word"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F6F8A94CC5C14733B81CBBCCC36027E3"
+                                                            {
+                                                            "Name" = "8:Addins"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_558E2A1E9DEB4A8E8EA8631C8CFFB6BD"
+                                                                    {
+                                                                    "Name" = "8:Word2ePub.WordAddIn"
+                                                                    "Condition" = "8:"
+                                                                    "AlwaysCreate" = "11:FALSE"
+                                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                                    "Transitive" = "11:FALSE"
+                                                                        "Keys"
+                                                                        {
+                                                                        }
+                                                                        "Values"
+                                                                        {
+                                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_2B43604C7B8244B0BC55523411AF57F2"
+                                                                            {
+                                                                            "Name" = "8:Description"
+                                                                            "Condition" = "8:"
+                                                                            "Transitive" = "11:FALSE"
+                                                                            "ValueTypes" = "3:1"
+                                                                            "Value" = "8:Word2ePub Add-In"
+                                                                            }
+                                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_5E463E3A9B144C5AAAEA176534AD5FB1"
+                                                                            {
+                                                                            "Name" = "8:FriendlyName"
+                                                                            "Condition" = "8:"
+                                                                            "Transitive" = "11:FALSE"
+                                                                            "ValueTypes" = "3:1"
+                                                                            "Value" = "8:Word2ePub Add-In"
+                                                                            }
+                                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_711E6FB6EC704F58B137F08A2F9CA18E"
+                                                                            {
+                                                                            "Name" = "8:Manifest"
+                                                                            "Condition" = "8:"
+                                                                            "Transitive" = "11:FALSE"
+                                                                            "ValueTypes" = "3:1"
+                                                                            "Value" = "8:file:///[ProgramFilesFolder]Word2ePub\\Word2ePub.vsto|vstolocal"
+                                                                            }
+                                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_91635B8F750D4168A497C538AEC212AE"
+                                                                            {
+                                                                            "Name" = "8:LoadBehavior"
+                                                                            "Condition" = "8:"
+                                                                            "Transitive" = "11:FALSE"
+                                                                            "ValueTypes" = "3:3"
+                                                                            "Value" = "3:3"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_B1F1A3CBCC1C4935B535A04FEC9843C9"
+                                                    {
+                                                    "Name" = "8:12.0"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_24A03FE016A549989986FF85421385C4"
+                                                            {
+                                                            "Name" = "8:Common"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_71A50EB7F45C4EEBBC4302BA99D485CA"
+                                                                    {
+                                                                    "Name" = "8:General"
+                                                                    "Condition" = "8:"
+                                                                    "AlwaysCreate" = "11:FALSE"
+                                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                                    "Transitive" = "11:FALSE"
+                                                                        "Keys"
+                                                                        {
+                                                                        }
+                                                                        "Values"
+                                                                        {
+                                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_6DFDBF526A3E4068A87D88FB99265884"
+                                                                            {
+                                                                            "Name" = "8:EnableLocalMachineVSTO"
+                                                                            "Condition" = "8:"
+                                                                            "Transitive" = "11:FALSE"
+                                                                            "ValueTypes" = "3:3"
+                                                                            "Value" = "3:1"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_C6FB6CF92E36434A83C65440740B8E35"
                             {
                             "Name" = "8:Microsoft"
@@ -533,6 +758,42 @@
                             "Transitive" = "11:FALSE"
                                 "Keys"
                                 {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_4A93A0A031C845D889903C870F0223E8"
+                                    {
+                                    "Name" = "8:Vsto Runtime Setup"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_770E2382C3DA40399ADE068B8E5B1713"
+                                            {
+                                            "Name" = "8:v4"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                }
+                                                "Values"
+                                                {
+                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_AF78CFF519704440A2120FE038441F52"
+                                                    {
+                                                    "Name" = "8:EnableVSTOLocalUNC"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "ValueTypes" = "3:3"
+                                                    "Value" = "3:1"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
                                     "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_CCD5714504314C9D9C4DAD97CEAADC97"
                                     {
                                     "Name" = "8:Office"
@@ -578,7 +839,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:[TARGETDIR]Word2ePub.vsto|vstolocal"
+                                                                    "Value" = "8:file:///[ProgramFilesFolder]Word2ePub\\Word2ePub.vsto|vstolocal"
                                                                     }
                                                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_3F40CA04342B47759C0304CB639B11BE"
                                                                     {

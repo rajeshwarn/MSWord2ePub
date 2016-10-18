@@ -22,4 +22,3 @@
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Debug\Word2HTML4ePub.csproj.GenerateResource.Cache
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Debug\Word2ePub.dll
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Debug\Word2ePub.pdb
-\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Debug\Word2HTML4ePub.csprojResolveAssemblyReference.cache

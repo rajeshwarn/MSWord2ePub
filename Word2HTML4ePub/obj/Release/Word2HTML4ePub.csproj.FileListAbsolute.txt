@@ -43,4 +43,28 @@ P:\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Rel
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\epubcheck-3.0.1.zip
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.Office.Tools.v4.0.Framework.dll
 \\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.dll
-\\FDLN\Documents\2014 09 13 Sauvegarde\Documents\Visual Studio 2010\Projects\SourceForge\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.csprojResolveAssemblyReference.cache
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\epubcheck-3.0.1.zip
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll.config
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.pdb
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.dll.manifest
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Word2ePub.vsto
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Ionic.Zip.dll
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.Office.Tools.v4.0.Framework.dll
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.dll
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\TidyNet.dll
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\Ionic.Zip.xml
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\bin\Release\TidyNet.xml
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.csprojResolveAssemblyReference.cache
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.CustomMessageBox.resources
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.AboutBox.resources
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.EditParam.resources
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.FormMetaData.resources
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.FormMonitor.resources
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.InternalEditor.resources
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.Properties.Resources.resources
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.RibbonWord2ePub.resources
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2HTML4ePub.csproj.GenerateResource.Cache
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2ePub.dll
+F:\temp prog\Word2HTML4ePub\Word2HTML4ePub\obj\Release\Word2ePub.pdb

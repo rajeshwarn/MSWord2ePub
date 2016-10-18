@@ -1,0 +1,63 @@
+La personnalisation n'a pas les autorisations requises pour créer un domaine d'application.
+
+
+************** Texte de l'exception **************
+Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateCustomizationDomainException: La personnalisation n'a pas les autorisations requises pour créer un domaine d'application. ---> System.Security.SecurityException: La fonctionnalité personnalisée dans cette application ne fonctionnera pas car l'administrateur a qualifié file://fdln/Documents/2014 09 13 Sauvegarde/Documents/Visual Studio 2010/Projects/SourceForge/Word2HTML4ePub/Word2HTML4ePub/bin/Debug/Word2ePub.vsto comme étant non fiable. Contactez votre administrateur pour obtenir de l'aide.
+   à Microsoft.VisualStudio.Tools.Office.Runtime.RuntimeUtilities.VerifySolutionUri(Uri uri)
+   à Microsoft.VisualStudio.Tools.Office.Runtime.DomainCreator.GetAssemblyDataFromManifests(String solutionLocation, String manifestLocator, String documentName, Boolean showUIDuringDeployment, CustomizationType customizationType, OfficeVersion officeVersion, IHostServiceProvider interopServiceProvider)
+   à Microsoft.VisualStudio.Tools.Office.Runtime.DomainCreator.CreateCustomizationDomainInternal(String solutionLocation, String manifestName, String documentName, Boolean showUIDuringDeployment, IntPtr hostServiceProvider, Boolean useFastPath, IntPtr& executor)
+   --- Fin de la trace de la pile d'exception interne ---
+
+
+************** Assemblys chargés **************
+mscorlib
+    Version de l'assembly : 4.0.0.0
+    Version Win32 : 4.6.1586.0 built by: NETFXREL2
+    CodeBase : file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll
+----------------------------------------
+Microsoft.VisualStudio.Tools.Office.Runtime
+    Version de l'assembly : 10.0.0.0
+    Version Win32 : 10.0.60724.0
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/Microsoft.VisualStudio.Tools.Office.Runtime/v4.0_10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualStudio.Tools.Office.Runtime.dll
+----------------------------------------
+System.Core
+    Version de l'assembly : 4.0.0.0
+    Version Win32 : 4.6.1586.0 built by: NETFXREL2
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll
+----------------------------------------
+System
+    Version de l'assembly : 4.0.0.0
+    Version Win32 : 4.6.1586.0 built by: NETFXREL2
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll
+----------------------------------------
+mscorlib.resources
+    Version de l'assembly : 4.0.0.0
+    Version Win32 : 4.6.1586.0 built by: NETFXREL2
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/mscorlib.resources/v4.0_4.0.0.0_fr_b77a5c561934e089/mscorlib.resources.dll
+----------------------------------------
+Microsoft.VisualStudio.Tools.Applications.Hosting
+    Version de l'assembly : 10.0.0.0
+    Version Win32 : 10.0.60724.0
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/Microsoft.VisualStudio.Tools.Applications.Hosting/v4.0_10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualStudio.Tools.Applications.Hosting.dll
+----------------------------------------
+Microsoft.VisualStudio.Tools.Applications.ServerDocument
+    Version de l'assembly : 10.0.0.0
+    Version Win32 : 10.0.60724.0
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/Microsoft.VisualStudio.Tools.Applications.ServerDocument/v4.0_10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll
+----------------------------------------
+Microsoft.VisualStudio.Tools.Applications.Runtime
+    Version de l'assembly : 10.0.0.0
+    Version Win32 : 10.0.60724.0
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/Microsoft.VisualStudio.Tools.Applications.Runtime/v4.0_10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualStudio.Tools.Applications.Runtime.dll
+----------------------------------------
+Microsoft.VisualStudio.Tools.Office.Runtime.resources
+    Version de l'assembly : 10.0.0.0
+    Version Win32 : 10.0.60724.0
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/Microsoft.VisualStudio.Tools.Office.Runtime.resources/v4.0_10.0.0.0_fr_b03f5f7f11d50a3a/Microsoft.VisualStudio.Tools.Office.Runtime.resources.dll
+----------------------------------------
+Microsoft.VisualStudio.Tools.Applications.ServerDocument.resources
+    Version de l'assembly : 10.0.0.0
+    Version Win32 : 10.0.60724.0
+    CodeBase : file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/Microsoft.VisualStudio.Tools.Applications.ServerDocument.resources/v4.0_10.0.0.0_fr_b03f5f7f11d50a3a/Microsoft.VisualStudio.Tools.Applications.ServerDocument.resources.dll
+----------------------------------------
+

@@ -14,12 +14,12 @@ namespace Word2HTML4ePub
         /// <returns>null si OK, sinon les erreurs</returns>
         public static string CheckEPub(string filename)
         {
-            //Si le fichier n'est pas en version locale, le copier dans un repéertoire temporaire
+            //Si le fichier n'est pas en version locale, le copier dans un repertoire temporaire
             FileInfo fi = new FileInfo(filename);
             string tempfile = filename;
             if (fi.FullName.StartsWith(string.Empty.PadLeft(2, Path.DirectorySeparatorChar)))
             {
-                tempfile = Path.Combine(Path.GetTempPath(), filename);
+                tempfile = Path.Combine(Path.GetTempPath(), Path.GetFileName(filename));
                 File.Copy(filename, tempfile);
                 MessageBox.Show("Fichier copié ici :" + tempfile);
             }

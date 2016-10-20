@@ -19,15 +19,26 @@ namespace Word2HTML4ePub
             {
                 if (String.IsNullOrEmpty(pSettingFile))
                 {
-                    
-//                    pSettingFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "ePubTools");
-                    pSettingFile = Application.CommonAppDataPath;
-                    if (!Directory.Exists(pSettingFile))
-                    {
-                        Directory.CreateDirectory(pSettingFile);
-                    }
 
-                    pSettingFile = Path.Combine(pSettingFile, Path.GetFileName(Environment.GetCommandLineArgs()[0]) + ".config");
+                    //Get the assembly information
+                    System.Reflection.Assembly assemblyInfo = System.Reflection.Assembly.GetExecutingAssembly();
+
+                    //Location is where the assembly is run from 
+                    string assemblyLocation = assemblyInfo.Location;
+
+                    ////CodeBase is the location of the ClickOnce deployment files
+                    //Uri uriCodeBase = new Uri(assemblyInfo.CodeBase);
+                    //string ClickOnceLocation = Path.GetDirectoryName(uriCodeBase.LocalPath.ToString());
+
+                    pSettingFile = assemblyInfo.CodeBase + ".config";
+                    //                    pSettingFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "ePubTools");
+                    //pSettingFile = Application.CommonAppDataPath;
+                    //if (!Directory.Exists(pSettingFile))
+                    //{
+                    //    Directory.CreateDirectory(pSettingFile);
+                    //}
+
+                    //pSettingFile = Path.Combine(pSettingFile, Path.GetFileName(Environment.GetCommandLineArgs()[0]) + ".config");
 
                     if (!File.Exists(pSettingFile))
                     {
@@ -70,6 +81,14 @@ namespace Word2HTML4ePub
                         
                     }
 
+                    //On va essayer de lire le Settings file
+                    if (!string.IsNullOrEmpty(SettingsFile.Default.javaPathSettings))
+                        if (File.Exists(SettingsFile.Default.javaPathSettings))
+                        {
+                            pJavaPath = SettingsFile.Default.javaPathSettings;
+                            return pJavaPath;
+                        }
+                    
                     try
                     {
                         pJavaPath = ReadDeportedAppFileKey("javaPath");
@@ -94,7 +113,7 @@ namespace Word2HTML4ePub
                         file1.Filter = "(java.exe)|java.exe";
                         file1.Multiselect = false;
                         if (file1.ShowDialog() != DialogResult.OK)
-                            MessageBox.Show("Impossible de trouver java.exe. est-il installé sur cet oridanteur?", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Impossible de trouver java.exe. est-il installé sur cet ordinateur?", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                             JavaPath = file1.FileName;
 
@@ -109,7 +128,8 @@ namespace Word2HTML4ePub
                 //config.AppSettings.Settings.Add("javaPath", value);
                 //config.Save(ConfigurationSaveMode.Modified);
                 //ConfigurationManager.RefreshSection("appSettings");
-                
+                SettingsFile.Default.javaPathSettings = value;
+                SettingsFile.Default.Save();
                 WriteDeportedAppFileKey("javaPath", value);
                 pJavaPath = value;
             }

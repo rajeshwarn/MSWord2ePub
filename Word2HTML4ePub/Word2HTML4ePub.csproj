@@ -42,7 +42,7 @@
     <PublishUrl>ftp://192.168.0.20/</PublishUrl>
     <InstallUrl>http://fdln.homeserver.com:85/</InstallUrl>
     <TargetCulture>fr</TargetCulture>
-    <ApplicationVersion>1.0.0.47</ApplicationVersion>
+    <ApplicationVersion>1.0.1.0</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>1</UpdateInterval>
@@ -233,6 +233,12 @@
     <Compile Include="Mise en forme\FonctionsCleanImages.cs" />
     <Compile Include="OPF\Open_ePub.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="SettingsFile.cs" />
+    <Compile Include="SettingsFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>SettingsFile.settings</DependentUpon>
+    </Compile>
     <Compile Include="Traitement_Images.cs" />
     <Compile Include="UI\CustomMessageBox.cs">
       <SubType>Form</SubType>
@@ -337,6 +343,10 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="SettingsFile.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>SettingsFile.Designer.cs</LastGenOutput>
+    </None>
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>

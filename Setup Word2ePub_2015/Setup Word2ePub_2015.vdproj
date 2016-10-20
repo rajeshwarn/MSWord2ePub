@@ -28,7 +28,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_59268078E34432D9310581A723A1A158"
+        "MsmKey" = "8:_44AF9311030C9B1ACFD74EEBF9156D35"
         "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -52,44 +52,44 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_ADD204A8BAF9A8068F6D07AD870BB881"
+        "MsmKey" = "8:_8ECEA3294674EDA4573C5B590C4DC845"
         "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CC7F404B69B3B1279C0413C992829C0D"
+        "MsmKey" = "8:_99528E06811D2FB2F5AF2D088EF8C929"
         "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D8309DD56B3E8B1DAF1544537D4E25CD"
+        "MsmKey" = "8:_E364B41F99B6E63AD4F8C622C116CECA"
         "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CC7F404B69B3B1279C0413C992829C0D"
+        "OwnerKey" = "8:_99528E06811D2FB2F5AF2D088EF8C929"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D8309DD56B3E8B1DAF1544537D4E25CD"
+        "OwnerKey" = "8:_44AF9311030C9B1ACFD74EEBF9156D35"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_59268078E34432D9310581A723A1A158"
+        "OwnerKey" = "8:_E364B41F99B6E63AD4F8C622C116CECA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_ADD204A8BAF9A8068F6D07AD870BB881"
+        "OwnerKey" = "8:_8ECEA3294674EDA4573C5B590C4DC845"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -243,20 +243,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_59268078E34432D9310581A723A1A158"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_44AF9311030C9B1ACFD74EEBF9156D35"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:TidyNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_59268078E34432D9310581A723A1A158"
+                    "_44AF9311030C9B1ACFD74EEBF9156D35"
                     {
-                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.DLL"
+                    "Name" = "8:TidyNet.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.DLL"
+            "SourcePath" = "8:TidyNet.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
@@ -278,7 +278,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Word2ePub, Version=1.0.0.30, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Word2ePub, Version=1.0.1.0, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_6172C454B8FE42ACBA50099FEFE9E8CF"
@@ -345,14 +345,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_ADD204A8BAF9A8068F6D07AD870BB881"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8ECEA3294674EDA4573C5B590C4DC845"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_ADD204A8BAF9A8068F6D07AD870BB881"
+                    "_8ECEA3294674EDA4573C5B590C4DC845"
                     {
                     "Name" = "8:Ionic.Zip.DLL"
                     "Attributes" = "3:512"
@@ -376,14 +376,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CC7F404B69B3B1279C0413C992829C0D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_99528E06811D2FB2F5AF2D088EF8C929"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:TRUE"
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CC7F404B69B3B1279C0413C992829C0D"
+                    "_99528E06811D2FB2F5AF2D088EF8C929"
                     {
                     "Name" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
                     "Attributes" = "3:512"
@@ -407,20 +407,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D8309DD56B3E8B1DAF1544537D4E25CD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E364B41F99B6E63AD4F8C622C116CECA"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:TidyNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D8309DD56B3E8B1DAF1544537D4E25CD"
+                    "_E364B41F99B6E63AD4F8C622C116CECA"
                     {
-                    "Name" = "8:TidyNet.DLL"
+                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:TidyNet.DLL"
+            "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
@@ -489,6 +489,17 @@
                 {
                 }
             }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_A3CC869E75934A129C4ACD682DB9DBE1"
+            {
+            "Name" = "8:#1915"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:AppDataFolder"
+                "Folders"
+                {
+                }
+            }
         }
         "LaunchCondition"
         {
@@ -505,16 +516,16 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Word2ePub"
-        "ProductCode" = "8:{A73DC01B-528B-46C4-845D-005383556324}"
-        "PackageCode" = "8:{5084B902-444D-4ACD-B152-B6E8265AAB1F}"
+        "ProductCode" = "8:{0321970F-5FB0-461F-81F8-E64274E4D7D3}"
+        "PackageCode" = "8:{278775CA-3A13-45E1-BB60-D7E8787081D8}"
         "UpgradeCode" = "8:{1FD4D41D-C9F8-404F-859D-83CC303A7428}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:FDLN"
+        "ProductVersion" = "8:1.0.1"
+        "Manufacturer" = "8:PH FRANCOIS"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup Word2ePub"
@@ -1351,6 +1362,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1F8597BF2119451ABC1C337371AEB1E8"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_A3CC869E75934A129C4ACD682DB9DBE1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:XmlSerializer"
+            "OutputProjectGuid" = "8:{D7CE18AE-5D5A-4B20-AFA0-D357218F1F84}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Security;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("Word2ePub")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Un AddIn pour convertir de Word vers ePub")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PH FRANCOIS")]
 [assembly: AssemblyProduct("Convertisseur Word2ePub")]
@@ -33,5 +33,5 @@ using System.Security;
 // Vous pouvez spécifier toutes les valeurs ou indiquer les numéros de build et de révision par défaut 
 // en utilisant '*', comme indiqué ci-dessous :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.30")]
-[assembly: AssemblyFileVersion("1.0.0.30")]
+[assembly: AssemblyVersion("1.0.1")]
+[assembly: AssemblyFileVersion("1.0.1")]

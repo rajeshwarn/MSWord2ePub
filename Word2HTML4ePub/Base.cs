@@ -72,6 +72,12 @@ namespace Word2HTML4ePub
                     return epubFile;
                 }
             }
+            else
+            {
+                MessageBox.Show("ePub Généré sans aucune vérification!\r\n" + epubFile, "Génération réussie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return epubFile;
+            }
+
             return epubFile;
         }
 

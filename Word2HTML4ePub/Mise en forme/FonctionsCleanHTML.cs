@@ -132,6 +132,27 @@ namespace Word2HTML4ePub
             }
 		}
 
+        private static bool CleanScripts(string ParsedFileName, ref System.Xml.XPath.XPathNavigator lir, ref System.Xml.XPath.XPathNodeIterator it)
+        {
+            try
+            {
+                ReportLog("Suppresion des sections <script> du fichier généré");
+                //Suppression de la section style 
+                it = lir.Select("/html/head//script");
+                while (it.MoveNext())
+                {
+                    it.Current.DeleteSelf();
+                    it = lir.Select("/html/head//script");
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de traiter la section script");
+                return false;
+            }
+        }
+
         private static bool AddStyleHeader(string TitreDuDoc, ref System.Xml.XPath.XPathNavigator lir, ref System.Xml.XPath.XPathNodeIterator it)
 		{
 			try
@@ -352,6 +373,52 @@ namespace Word2HTML4ePub
 				return false;
             }
 		}
+
+        private static bool RemoveBaliseClass(string LocalName, string className, ref System.Xml.XPath.XPathNavigator lir, ref System.Xml.XPath.XPathNodeIterator it)
+        {
+            try
+            {
+                ReportLog("Suppression des <" + LocalName + " class=\"" + className + "\" >");
+                //suppression des span avec une class que l'on ne veux pas garder (par exemple les commentaires de relecture)
+                string exPath = "/html/body//" + LocalName + "[@class=\"" + className +"\"]";
+                it = lir.Select(lir.Compile(exPath));
+                while (it.MoveNext())
+                {
+                    it.Current.DeleteSelf();
+                    it = lir.Select(lir.Compile(exPath));
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de purger les <" + LocalName + " class=\"" + className + "\" >");
+                return false;
+            }
+        }
+
+        private static bool RemoveCommentsFinalBlocs(ref System.Xml.XPath.XPathNavigator lir, ref System.Xml.XPath.XPathNodeIterator it)
+        {
+            //<div><hr class="msocomoff"
+            try
+            {
+                ReportLog("Suppression du dernier bloc <div><hr class=\"msocomoff\">");
+                string exPath = "/html/body/div/hr[@class=\"msocomoff\"]";
+                it = lir.Select(lir.Compile(exPath));
+                while (it.MoveNext())
+                {
+                    it.Current.MoveToParent();
+                    it.Current.DeleteSelf();
+                    it = lir.Select(lir.Compile(exPath));
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show("Message d'erreur:\r" + e.Message, "Impossible de purger le dernier bloc de commentaires");
+                return false;
+            }
+
+        }
 
         private static bool RemoveDiv(ref System.Xml.XPath.XPathNavigator lir, ref System.Xml.XPath.XPathNodeIterator it)
         {

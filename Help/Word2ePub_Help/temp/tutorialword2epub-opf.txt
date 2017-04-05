@@ -1,0 +1,11 @@
+<opf:manifest>
+<opf:item id="Chap0" href="tutorialword2epub-0.html" media-type="application/xhtml+xml" />
+<opf:item id="Chap1" href="tutorialword2epub-1.html" media-type="application/xhtml+xml" />
+<opf:item id="Chap2" href="tutorialword2epub-2.html" media-type="application/xhtml+xml" properties="svg" />
+<opf:item id="Chap3" href="tutorialword2epub-3.html" media-type="application/xhtml+xml" properties="svg" />
+
+<opf:spine>
+<opf:itemref idref="Chap0" linear="yes" />
+<opf:itemref idref="Chap1" linear="yes" />
+<opf:itemref idref="Chap2" linear="yes" />
+<opf:itemref idref="Chap3" linear="yes" />

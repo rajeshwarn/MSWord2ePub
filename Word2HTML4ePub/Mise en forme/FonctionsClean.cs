@@ -118,7 +118,10 @@ namespace Word2HTML4ePub
  			if (!ExtractCssStyles(ParsedFileName, ref lir, ref it))
 				return;
 
-			if (!AddStyleHeader(TitreDuDoc, ref lir, ref it))
+            if (!CleanScripts(ParsedFileName, ref lir, ref it))
+                return;
+
+            if (!AddStyleHeader(TitreDuDoc, ref lir, ref it))
 				return;
 
             if (!RemoveDivClass(ref lir, ref it, "WordSection"))
@@ -147,6 +150,12 @@ namespace Word2HTML4ePub
 
 			if (!RemoveBalise("span", ref lir, ref it))
 				return;
+
+            if (!RemoveBaliseClass("span", "MsoCommentReference", ref lir, ref it))
+                return;
+
+            if (!RemoveCommentsFinalBlocs(ref lir, ref it))
+                return;
 
             if (!WordHTML2ePubHTML.RemoveIndent(ref lir))
                 return;

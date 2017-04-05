@@ -34,17 +34,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl4 = this.Factory.CreateRibbonDropDownItem();
+            Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl5 = this.Factory.CreateRibbonDropDownItem();
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl1 = this.Factory.CreateRibbonDropDownItem();
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl2 = this.Factory.CreateRibbonDropDownItem();
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl3 = this.Factory.CreateRibbonDropDownItem();
-            Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl4 = this.Factory.CreateRibbonDropDownItem();
-            Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl5 = this.Factory.CreateRibbonDropDownItem();
             this.TabWord2ePub = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
             this.btnConvert = this.Factory.CreateRibbonButton();
-            this.btnConfig = this.Factory.CreateRibbonButton();
-            this.btnAPropos = this.Factory.CreateRibbonButton();
-            this.group2 = this.Factory.CreateRibbonGroup();
             this.galDecoupe = this.Factory.CreateRibbonGallery();
             this.txtSize = this.Factory.CreateRibbonEditBox();
             this.grpePub = this.Factory.CreateRibbonGroup();
@@ -60,18 +57,18 @@
             this.galImages = this.Factory.CreateRibbonGallery();
             this.separator1 = this.Factory.CreateRibbonSeparator();
             this.cmdAbout = this.Factory.CreateRibbonButton();
+            this.cmdTuto = this.Factory.CreateRibbonButton();
             this.TabWord2ePub.SuspendLayout();
             this.group1.SuspendLayout();
-            this.group2.SuspendLayout();
             this.grpePub.SuspendLayout();
             this.grpePub2Word.SuspendLayout();
             this.group3.SuspendLayout();
+            this.SuspendLayout();
             // 
             // TabWord2ePub
             // 
             this.TabWord2ePub.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.TabWord2ePub.Groups.Add(this.group1);
-            this.TabWord2ePub.Groups.Add(this.group2);
             this.TabWord2ePub.Groups.Add(this.grpePub);
             this.TabWord2ePub.Groups.Add(this.grpePub2Word);
             this.TabWord2ePub.Groups.Add(this.group3);
@@ -81,8 +78,7 @@
             // group1
             // 
             this.group1.Items.Add(this.btnConvert);
-            this.group1.Items.Add(this.btnConfig);
-            this.group1.Items.Add(this.btnAPropos);
+            this.group1.Items.Add(this.txtSize);
             this.group1.Label = "Word2HTML";
             this.group1.Name = "group1";
             this.group1.Visible = false;
@@ -93,35 +89,15 @@
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnConvert_Click);
             // 
-            // btnConfig
-            // 
-            this.btnConfig.Label = "Configuration";
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnConfig_Click);
-            // 
-            // btnAPropos
-            // 
-            this.btnAPropos.Label = "A Propos de Word2HTML4ePub";
-            this.btnAPropos.Name = "btnAPropos";
-            this.btnAPropos.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnAPropos_Click);
-            // 
-            // group2
-            // 
-            this.group2.Items.Add(this.galDecoupe);
-            this.group2.Items.Add(this.txtSize);
-            this.group2.Label = "Découpe des fichiers";
-            this.group2.Name = "group2";
-            this.group2.Visible = false;
-            // 
             // galDecoupe
             // 
             this.galDecoupe.ColumnCount = 1;
-            ribbonDropDownItemImpl1.Label = "Aucun";
-            ribbonDropDownItemImpl1.Tag = "No";
-            ribbonDropDownItemImpl2.Label = "Chapitre";
-            ribbonDropDownItemImpl2.Tag = "Chap";
-            this.galDecoupe.Items.Add(ribbonDropDownItemImpl1);
-            this.galDecoupe.Items.Add(ribbonDropDownItemImpl2);
+            ribbonDropDownItemImpl4.Label = "Aucun";
+            ribbonDropDownItemImpl4.Tag = "No";
+            ribbonDropDownItemImpl5.Label = "Chapitre";
+            ribbonDropDownItemImpl5.Tag = "Chap";
+            this.galDecoupe.Items.Add(ribbonDropDownItemImpl4);
+            this.galDecoupe.Items.Add(ribbonDropDownItemImpl5);
             this.galDecoupe.Label = "Découpe";
             this.galDecoupe.Name = "galDecoupe";
             this.galDecoupe.RowCount = 3;
@@ -191,8 +167,10 @@
             // 
             this.group3.Items.Add(this.label1);
             this.group3.Items.Add(this.galImages);
+            this.group3.Items.Add(this.galDecoupe);
             this.group3.Items.Add(this.separator1);
             this.group3.Items.Add(this.cmdAbout);
+            this.group3.Items.Add(this.cmdTuto);
             this.group3.Label = "Word2ePub";
             this.group3.Name = "group3";
             // 
@@ -204,12 +182,12 @@
             // galImages
             // 
             this.galImages.ColumnCount = 1;
-            ribbonDropDownItemImpl3.Label = "Images";
-            ribbonDropDownItemImpl4.Label = "NoImages";
-            ribbonDropDownItemImpl5.Label = "Resized";
+            ribbonDropDownItemImpl1.Label = "Images";
+            ribbonDropDownItemImpl2.Label = "NoImages";
+            ribbonDropDownItemImpl3.Label = "Resized";
+            this.galImages.Items.Add(ribbonDropDownItemImpl1);
+            this.galImages.Items.Add(ribbonDropDownItemImpl2);
             this.galImages.Items.Add(ribbonDropDownItemImpl3);
-            this.galImages.Items.Add(ribbonDropDownItemImpl4);
-            this.galImages.Items.Add(ribbonDropDownItemImpl5);
             this.galImages.Label = "Traitement des images";
             this.galImages.Name = "galImages";
             this.galImages.RowCount = 3;
@@ -226,6 +204,12 @@
             this.cmdAbout.Name = "cmdAbout";
             this.cmdAbout.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.cmdAbout_Click);
             // 
+            // cmdTuto
+            // 
+            this.cmdTuto.Label = "Tutorial Word2ePub";
+            this.cmdTuto.Name = "cmdTuto";
+            this.cmdTuto.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.cmdTuto_Click);
+            // 
             // RibbonWord2ePub
             // 
             this.Name = "RibbonWord2ePub";
@@ -236,14 +220,13 @@
             this.TabWord2ePub.PerformLayout();
             this.group1.ResumeLayout(false);
             this.group1.PerformLayout();
-            this.group2.ResumeLayout(false);
-            this.group2.PerformLayout();
             this.grpePub.ResumeLayout(false);
             this.grpePub.PerformLayout();
             this.grpePub2Word.ResumeLayout(false);
             this.grpePub2Word.PerformLayout();
             this.group3.ResumeLayout(false);
             this.group3.PerformLayout();
+            this.ResumeLayout(false);
 
         }
 
@@ -251,9 +234,6 @@
 
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnConvert;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnConfig;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAPropos;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
         internal Microsoft.Office.Tools.Ribbon.RibbonGallery galDecoupe;
         internal Microsoft.Office.Tools.Ribbon.RibbonEditBox txtSize;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup grpePub;
@@ -270,6 +250,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGallery galImages;
         internal Microsoft.Office.Tools.Ribbon.RibbonLabel label1;
         internal Microsoft.Office.Tools.Ribbon.RibbonSeparator separator1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton cmdTuto;
     }
 
     partial class ThisRibbonCollection

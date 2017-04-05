@@ -16,86 +16,92 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_203B054E94AF45CBA8AB7840EEAB1936"
+        "MsmKey" = "8:_39D6744D89063D135A90A59FD610713A"
+        "OwnerKey" = "8:_5F0795CDE9BD362F92D15AC472CE944A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_39D6744D89063D135A90A59FD610713A"
+        "OwnerKey" = "8:_8368E41EC565460094B3C3C27A05842F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4181F210E0F6E7B047D91D5744F13A2B"
+        "OwnerKey" = "8:_8368E41EC565460094B3C3C27A05842F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5F0795CDE9BD362F92D15AC472CE944A"
+        "OwnerKey" = "8:_8368E41EC565460094B3C3C27A05842F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8368E41EC565460094B3C3C27A05842F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_256FA8AC49F04042B392206F86D030F2"
+        "MsmKey" = "8:_84BB993C7307CC84713855E90E4C6C87"
+        "OwnerKey" = "8:_8368E41EC565460094B3C3C27A05842F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C54E793D82298DD463B9042D38769C3A"
+        "OwnerKey" = "8:_8368E41EC565460094B3C3C27A05842F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C70A70638F24438FB84590497DBACDA9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_44AF9311030C9B1ACFD74EEBF9156D35"
-        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
+        "MsmKey" = "8:_F0FC9A6CAF4D404C8E187EFC9C9EA3C6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_804A303B220846269535141C860CF3B5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_861879531B4D4D429E1D247359CFEE13"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8ECEA3294674EDA4573C5B590C4DC845"
-        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_99528E06811D2FB2F5AF2D088EF8C929"
-        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E364B41F99B6E63AD4F8C622C116CECA"
-        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4181F210E0F6E7B047D91D5744F13A2B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_99528E06811D2FB2F5AF2D088EF8C929"
+        "OwnerKey" = "8:_8368E41EC565460094B3C3C27A05842F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_44AF9311030C9B1ACFD74EEBF9156D35"
+        "OwnerKey" = "8:_C54E793D82298DD463B9042D38769C3A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E364B41F99B6E63AD4F8C622C116CECA"
+        "OwnerKey" = "8:_5F0795CDE9BD362F92D15AC472CE944A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8ECEA3294674EDA4573C5B590C4DC845"
+        "OwnerKey" = "8:_39D6744D89063D135A90A59FD610713A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6172C454B8FE42ACBA50099FEFE9E8CF"
+        "OwnerKey" = "8:_84BB993C7307CC84713855E90E4C6C87"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -157,10 +163,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 et x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    "Name" = "8:Microsoft .NET Framework 4 (x86 et x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0"
                     }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.VSTORuntime.4.0"
                     {
@@ -195,7 +201,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.5"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.0"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=395269"
                 }
@@ -203,187 +209,14 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_203B054E94AF45CBA8AB7840EEAB1936"
-            {
-            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\epubcheck-3.0.1.zip"
-            "TargetName" = "8:epubcheck-3.0.1.zip"
-            "Tag" = "8:"
-            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_256FA8AC49F04042B392206F86D030F2"
-            {
-            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.vsto"
-            "TargetName" = "8:Word2ePub.vsto"
-            "Tag" = "8:"
-            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_44AF9311030C9B1ACFD74EEBF9156D35"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_39D6744D89063D135A90A59FD610713A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:TidyNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_44AF9311030C9B1ACFD74EEBF9156D35"
-                    {
-                    "Name" = "8:TidyNet.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:TidyNet.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6172C454B8FE42ACBA50099FEFE9E8CF"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Word2ePub, Version=1.0.1.0, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_6172C454B8FE42ACBA50099FEFE9E8CF"
-                    {
-                    "Name" = "8:Word2ePub.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_804A303B220846269535141C860CF3B5"
-            {
-            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.dll.config"
-            "TargetName" = "8:Word2ePub.dll.config"
-            "Tag" = "8:"
-            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_861879531B4D4D429E1D247359CFEE13"
-            {
-            "SourcePath" = "8:\\\\FDLN\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\bin\\Release\\Word2ePub.dll.manifest"
-            "TargetName" = "8:Word2ePub.dll.manifest"
-            "Tag" = "8:"
-            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8ECEA3294674EDA4573C5B590C4DC845"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_8ECEA3294674EDA4573C5B590C4DC845"
-                    {
-                    "Name" = "8:Ionic.Zip.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Ionic.Zip.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_99528E06811D2FB2F5AF2D088EF8C929"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_99528E06811D2FB2F5AF2D088EF8C929"
+                    "_39D6744D89063D135A90A59FD610713A"
                     {
                     "Name" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
                     "Attributes" = "3:512"
@@ -407,20 +240,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E364B41F99B6E63AD4F8C622C116CECA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4181F210E0F6E7B047D91D5744F13A2B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:TidyNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d9174e28b1729f3, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E364B41F99B6E63AD4F8C622C116CECA"
+                    "_4181F210E0F6E7B047D91D5744F13A2B"
                     {
-                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.DLL"
+                    "Name" = "8:TidyNet.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.DLL"
+            "SourcePath" = "8:TidyNet.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
@@ -436,6 +269,139 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5F0795CDE9BD362F92D15AC472CE944A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_5F0795CDE9BD362F92D15AC472CE944A"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_84BB993C7307CC84713855E90E4C6C87"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_84BB993C7307CC84713855E90E4C6C87"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C54E793D82298DD463B9042D38769C3A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C54E793D82298DD463B9042D38769C3A"
+                    {
+                    "Name" = "8:Ionic.Zip.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Ionic.Zip.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C70A70638F24438FB84590497DBACDA9"
+            {
+            "SourcePath" = "8:\\\\FDLNSERVER\\Shared Folders\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Lib\\epubcheck-3.0.1.zip"
+            "TargetName" = "8:epubcheck-3.0.1.zip"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F0FC9A6CAF4D404C8E187EFC9C9EA3C6"
+            {
+            "SourcePath" = "8:\\\\FDLNSERVER\\Shared Folders\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\Word2ePub tutorial.docx"
+            "TargetName" = "8:Word2ePub tutorial.docx"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -516,15 +482,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Word2ePub"
-        "ProductCode" = "8:{0321970F-5FB0-461F-81F8-E64274E4D7D3}"
-        "PackageCode" = "8:{278775CA-3A13-45E1-BB60-D7E8787081D8}"
-        "UpgradeCode" = "8:{1FD4D41D-C9F8-404F-859D-83CC303A7428}"
+        "ProductCode" = "8:{FD32C1F7-8897-482C-8C65-CBEA1E4A8E2B}"
+        "PackageCode" = "8:{01658755-C837-44B5-83BB-2334BB16A90B}"
+        "UpgradeCode" = "8:{04FDDE97-E212-4A0E-91D9-15F08C410970}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.3"
         "Manufacturer" = "8:PH FRANCOIS"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -643,8 +609,8 @@
                                                                     {
                                                                     "Name" = "8:Word2ePub.WordAddIn"
                                                                     "Condition" = "8:"
-                                                                    "AlwaysCreate" = "11:FALSE"
-                                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                                    "AlwaysCreate" = "11:TRUE"
+                                                                    "DeleteAtUninstall" = "11:TRUE"
                                                                     "Transitive" = "11:FALSE"
                                                                         "Keys"
                                                                         {
@@ -682,56 +648,6 @@
                                                                             "Transitive" = "11:FALSE"
                                                                             "ValueTypes" = "3:3"
                                                                             "Value" = "3:3"
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                                "Values"
-                                                                {
-                                                                }
-                                                            }
-                                                        }
-                                                        "Values"
-                                                        {
-                                                        }
-                                                    }
-                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_B1F1A3CBCC1C4935B535A04FEC9843C9"
-                                                    {
-                                                    "Name" = "8:12.0"
-                                                    "Condition" = "8:"
-                                                    "AlwaysCreate" = "11:FALSE"
-                                                    "DeleteAtUninstall" = "11:FALSE"
-                                                    "Transitive" = "11:FALSE"
-                                                        "Keys"
-                                                        {
-                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_24A03FE016A549989986FF85421385C4"
-                                                            {
-                                                            "Name" = "8:Common"
-                                                            "Condition" = "8:"
-                                                            "AlwaysCreate" = "11:FALSE"
-                                                            "DeleteAtUninstall" = "11:FALSE"
-                                                            "Transitive" = "11:FALSE"
-                                                                "Keys"
-                                                                {
-                                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_71A50EB7F45C4EEBBC4302BA99D485CA"
-                                                                    {
-                                                                    "Name" = "8:General"
-                                                                    "Condition" = "8:"
-                                                                    "AlwaysCreate" = "11:FALSE"
-                                                                    "DeleteAtUninstall" = "11:FALSE"
-                                                                    "Transitive" = "11:FALSE"
-                                                                        "Keys"
-                                                                        {
-                                                                        }
-                                                                        "Values"
-                                                                        {
-                                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_6DFDBF526A3E4068A87D88FB99265884"
-                                                                            {
-                                                                            "Name" = "8:EnableLocalMachineVSTO"
-                                                                            "Condition" = "8:"
-                                                                            "Transitive" = "11:FALSE"
-                                                                            "ValueTypes" = "3:3"
-                                                                            "Value" = "3:1"
                                                                             }
                                                                         }
                                                                     }
@@ -909,34 +825,6 @@
             {
                 "Keys"
                 {
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_E710EC042F9A4982BA9DA26DDB0F5AB6"
-                    {
-                    "Name" = "8:Software"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_0414AAFA712443CC92393116A7D81475"
-                            {
-                            "Name" = "8:[Manufacturer]"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
                 }
             }
             "HKCR"
@@ -1384,6 +1272,34 @@
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:XmlSerializer"
+            "OutputProjectGuid" = "8:{D7CE18AE-5D5A-4B20-AFA0-D357218F1F84}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8368E41EC565460094B3C3C27A05842F"
+            {
+            "SourcePath" = "8:\\\\FDLNSERVER\\Shared Folders\\Documents\\2014 09 13 Sauvegarde\\Documents\\Visual Studio 2010\\Projects\\SourceForge\\Word2HTML4ePub\\Word2HTML4ePub\\obj\\Release\\Word2ePub.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_0F36F49C096E47579389D96068FC3AD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:Release|Any CPU"
+            "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{D7CE18AE-5D5A-4B20-AFA0-D357218F1F84}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"

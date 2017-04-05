@@ -29,7 +29,7 @@ namespace Word2HTML4ePub
         /// Ouvrir automatiquement un fichier word... fonction utilisée pour le debug.
         /// </summary>
         /// <param name="fileName">Path complet</param>
-        private static void OpenFile(string fileName)
+        internal static void OpenFile(string fileName)
         {
             //ouvrir le doc de test
             object newFileName = fileName;

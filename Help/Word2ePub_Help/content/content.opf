@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<opf:package xmlns:opf="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="modele">
+  <opf:metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title>Tutorial Word2ePub</dc:title>
+    <dc:identifier id="modele">urn:uuid:37800679-E515-4385-8E09-72F4BEE585E2</dc:identifier>
+    <opf:meta property="dcterms:modified">2012-10-10T12:00:00Z</opf:meta>
+    <dc:language>Francais</dc:language>
+    <dc:creator>Pierre-Henri FRANCOIS</dc:creator>
+    <dc:date>2016-10-21T00:00:36Z</dc:date>
+    <dc:description>Un petit tutorial très rapide pour générer des ePub</dc:description>
+    <dc:subject>Tutorial</dc:subject>
+    <dc:publisher>Pierre-Henri FRANCOIS</dc:publisher>
+  </opf:metadata>
+  <opf:manifest>
+    <opf:item id="couverture" href="couverture.html" media-type="application/xhtml+xml" properties="svg" />
+    <opf:item id="cssStyleSheet" href="style.css" media-type="text/css" />
+    <opf:item properties="cover-image" id="cover" href="sans titre1.jpg" media-type="image/jpeg" />
+    <opf:item properties="nav" id="navPage" href="tutorialword2epub-nav.html" media-type="application/xhtml+xml" />
+    <opf:item id="Chap0" href="tutorialword2epub-0.html" media-type="application/xhtml+xml" />
+    <opf:item id="Chap1" href="tutorialword2epub-1.html" media-type="application/xhtml+xml" />
+    <opf:item id="Chap2" href="tutorialword2epub-2.html" media-type="application/xhtml+xml" properties="svg" />
+    <opf:item id="Chap3" href="tutorialword2epub-3.html" media-type="application/xhtml+xml" properties="svg" />
+  </opf:manifest>
+  <opf:spine toc="autoToc">
+    <opf:itemref idref="couverture" linear="yes" />
+    <opf:itemref idref="navPage" linear="no" />
+    <opf:itemref idref="Chap0" linear="yes" />
+    <opf:itemref idref="Chap1" linear="yes" />
+    <opf:itemref idref="Chap2" linear="yes" />
+    <opf:itemref idref="Chap3" linear="yes" />
+  </opf:spine>
+</opf:package>

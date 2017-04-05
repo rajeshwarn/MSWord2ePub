@@ -29,3 +29,7 @@ For more information about the DontDisplayHKLMAddins registry entry, click the f
 929590 Known issues when you develop custom solutions for Office Outlook 2007
 When you deploy both the EnableLocalMachineVSTO and DontDisplayHKLMAddins registry entries, the add-ins are listed in the Trust Center of a 2007 Office system. Additionally, you cannot remove the add-ins because they do not appear in the COM Add-ins window.
 STATUS
+
+
+https://www.experts-exchange.com/articles/3227/How-to-Include-MS-Office-2007-Hotfix-as-Prerequisite-into-a-setup-project.html
+https://msdn.microsoft.com/fr-fr/library/ms165429.aspx

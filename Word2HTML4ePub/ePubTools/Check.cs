@@ -16,11 +16,13 @@ namespace Word2HTML4ePub
         {
             //Si le fichier n'est pas en version locale, le copier dans un repertoire temporaire
             FileInfo fi = new FileInfo(filename);
-            string tempfile = "";
+            string tempfile = filename;
+            bool temp = false;
             if (fi.FullName.StartsWith(string.Empty.PadLeft(2, Path.DirectorySeparatorChar)))
             {
                 tempfile = Path.Combine(Path.GetTempPath(), Path.GetFileName(filename));
                 File.Copy(filename, tempfile, true);
+                temp = true;
                 //MessageBox.Show("Fichier copié ici :" + tempfile);
             }
 
@@ -47,7 +49,7 @@ namespace Word2HTML4ePub
 
             proc.Close(); // Libération des ressources
 
-            if (string.IsNullOrEmpty(tempfile))
+            if (temp)
             {
                 File.Delete(tempfile);
             }

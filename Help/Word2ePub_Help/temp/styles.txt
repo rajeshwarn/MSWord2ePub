@@ -1,0 +1,34 @@
+Balise	Classe
+p
+	MsoTitle
+	BALISE_SEULE
+	MsoListParagraphCxSpFirst
+	MsoListParagraphCxSpMiddle
+	MsoListParagraphCxSpLast
+	MsoListParagraph
+
+hr
+	BALISE_SEULE
+
+cite
+	BALISE_SEULE
+
+h1
+	BALISE_SEULE
+
+figure
+	BALISE_SEULE
+
+svg
+
+image
+
+figcaption
+	BALISE_SEULE
+
+strong
+	BALISE_SEULE
+
+br
+	BALISE_SEULE
+

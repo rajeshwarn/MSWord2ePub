@@ -39,11 +39,15 @@ namespace Word2HTML4ePub
                     //}
 
                     //pSettingFile = Path.Combine(pSettingFile, Path.GetFileName(Environment.GetCommandLineArgs()[0]) + ".config");
-
-                    if (!File.Exists(pSettingFile))
+                    string newpath = new Uri(pSettingFile).LocalPath;
+                    FileInfo fi = new FileInfo(newpath);
+                    if (!fi.Exists)
+                    //if (!File.Exists(pSettingFile))
                     {
-                        File.Copy(Path.GetFileName(Environment.GetCommandLineArgs()[0]) + ".config", pSettingFile);
+                        
+                        File.Copy(Path.GetFileName(Environment.GetCommandLineArgs()[0]) + ".config", newpath);
                     }
+                    pSettingFile = newpath;
                 }
                 return pSettingFile;
             }

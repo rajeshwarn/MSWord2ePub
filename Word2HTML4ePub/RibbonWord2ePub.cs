@@ -278,5 +278,17 @@ namespace Word2HTML4ePub
 
 
         }
+
+        private void cmdTuto_Click(object sender, RibbonControlEventArgs e)
+        {
+            //Get the assembly information
+            System.Reflection.Assembly assemblyInfo = System.Reflection.Assembly.GetExecutingAssembly();
+            Uri fileUri = new Uri(assemblyInfo.CodeBase, UriKind.Absolute);
+            fileUri = new Uri(fileUri, "Word2ePub tutorial.docx");
+
+            if (File.Exists(fileUri.LocalPath))
+                WordHTML2ePubHTML.OpenFile(fileUri.LocalPath);
+            
+        }
     }
 }
